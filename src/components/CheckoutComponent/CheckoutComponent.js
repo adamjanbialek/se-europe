@@ -10,7 +10,7 @@ export const CheckoutComponent = () => {
                 <h1 className={'page-title'}>CHECKOUT</h1>
                 <div className={'info-container'}>
                     <div className={'info-item'}>
-                        <h2>Order and offer </h2>
+                        <h2>Order and offer</h2>
                     </div>
                 </div>
                 <div className={'info-container'}>
