@@ -1,0 +1,12 @@
+.info-item {
+  width: 100%;
+}
+
+.cart-item__info {
+  display: flex;
+}
+
+.cart-item-container--checkout {
+  height: fit-content;
+  overflow-y: auto;
+}
