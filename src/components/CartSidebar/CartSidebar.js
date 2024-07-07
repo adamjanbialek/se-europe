@@ -26,7 +26,7 @@ export const CartSidebar = () => {
                 {cart.length ? (
                         <>
                             <div className={`aside__line-container aside__line-container--cart`}>
-                                <button className={'btn-sidebar--cart'}>Do kasy</button>
+                                <Link className={'btn-sidebar--cart'} to={'/checkout'} element={<CheckoutComponent/>}>Do kasy</Link>
                                 <Link className={'btn-sidebar--cart'} to={'/checkout'} element={<CheckoutComponent/>}>Złożenie oferty</Link>
                                 <div className={'info-container'}>
                                     <p>{cart.reduce((acc, el) => acc + el.quantity, 0)} produkt(ów)</p>

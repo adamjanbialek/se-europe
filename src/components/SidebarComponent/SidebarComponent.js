@@ -114,24 +114,49 @@ export const SidebarComponent = (props) => {
                         </AccordionSummary>
                         <AccordionDetails>
                             <ul >
-                                <li className="nav__submenu-item ">
-                                    <Link to={'/moja-maszyna/ladowarka-kolowa'}>Ładowarka kołowa</Link>
-                                </li>
-                                <li className="nav__submenu-item ">
-                                    <Link to={'/moja-maszyna/koparka'}>Koparka</Link>
-                                </li>
-                                <li className="nav__submenu-item ">
-                                    <Link to={'/moja-maszyna/traktor'} >Traktor</Link>
-                                </li>
-                                <li className="nav__submenu-item ">
-                                    <Link to={'/moja-maszyna/ladowarka-teleskopowa'} >Ładowarka teleskopowa</Link>
-                                </li>
-                                <li className="nav__submenu-item ">
-                                    <Link to={'/moja-maszyna/wozek-widlowy'} >Wózek widłowy</Link>
-                                </li>
-                                <li className="nav__submenu-item ">
-                                    <Link to={'/moja-maszyna/bez-zlacz'} >Bez złącz</Link>
-                                </li>
+                                {props.machines.map(el => Array.isArray(el) ?
+                                    <>
+                                        {
+                                            <>
+                                                <li className="nav__submenu-item">
+                                                    <Accordion className={'aside__line aside__line--accordion'}>
+                                                        <AccordionSummary
+                                                            aria-controls="panel2-content"
+                                                            id="panel2-header"
+                                                        >
+                                                            <Link to={`/moja-maszyna/${el[0].category[0]}`} element={<MyMachine/>}>{el[0].category[1]}</Link>
+                                                        </AccordionSummary>
+                                                    </Accordion>
+                                                </li>
+                                            </>
+
+                                        }
+                                    </>
+                                    :
+                                    <>
+                                        <li className="nav__submenu-item ">
+                                            <Link to={`/moja-maszyna/${el.url}`}>{el.name}</Link>
+                                        </li>
+                                    </>
+                                )}
+                                {/*<li className="nav__submenu-item ">*/}
+                                {/*    <Link to={'/moja-maszyna/ladowarka-kolowa'}>Ładowarka kołowa</Link>*/}
+                                {/*</li>*/}
+                                {/*<li className="nav__submenu-item ">*/}
+                                {/*    <Link to={'/moja-maszyna/koparka'}>Koparka</Link>*/}
+                                {/*</li>*/}
+                                {/*<li className="nav__submenu-item ">*/}
+                                {/*    <Link to={'/moja-maszyna/traktor'} >Traktor</Link>*/}
+                                {/*</li>*/}
+                                {/*<li className="nav__submenu-item ">*/}
+                                {/*    <Link to={'/moja-maszyna/ladowarka-teleskopowa'} >Ładowarka teleskopowa</Link>*/}
+                                {/*</li>*/}
+                                {/*<li className="nav__submenu-item ">*/}
+                                {/*    <Link to={'/moja-maszyna/wozek-widlowy'} >Wózek widłowy</Link>*/}
+                                {/*</li>*/}
+                                {/*<li className="nav__submenu-item ">*/}
+                                {/*    <Link to={'/moja-maszyna/bez-zlacz'} >Bez złącz</Link>*/}
+                                {/*</li>*/}
                             </ul>
 
                         </AccordionDetails>

@@ -1,0 +1,46 @@
+.checkout-page {
+  background-color: rgba(170, 170, 170, 0.2);
+
+  .info-container {
+    background-color: unset;
+
+    &--multiple {
+      gap: 30px;
+    }
+
+    &:last-of-type {
+      text-align: center;
+    }
+  }
+
+  .total-info {
+    text-align: center !important;
+  }
+
+  .total--partial {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .info-item {
+    background-color: white;
+    padding: 10px 20px;
+    &__subitem {
+      label {
+        display: flex;
+        width: fit-content;
+      }
+    }
+
+    &__titles {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  .btn-sidebar--cart {
+    margin: auto;
+    width: fit-content;
+    padding-inline: 15px;
+  }
+}

@@ -139,6 +139,44 @@
                 }
             ]
         }
-    }
+    },
+    {
+        "url": "manitou",
+        "name": "Manitou",
+        "imgUrl": "https://seequipment.se/images/prod630/101299.1360.png",
+        "description": "Dostarczamy i przechowujemy narzędzia do ładowarek kołowych z mocowaniami CAT 906.",
+        "couplings": ["manitou","Manitou"],
+        "tableData": {
+            "materialhanteringsarm": [
+                {
+                    "artNo": 112697,
+                    "coupling": "Manitou",
+                    "model": "Solid arm",
+                    "weight": 124
+                }
+            ]
+        }
+    },
+    [
+        {
+            "url": "s40",
+            "name": "S40",
+            "imgUrl": "https://se-europe.com/images/prod500/S40_asfaltssk%c3%a4rare_gr%c3%a4vmaskin.png",
+            "description": "Zajmujemy się dostawą i magazynowaniem osprzętu do koparek.",
+            "couplings": ["s-zlacze", "S-złącze"],
+            "tableData": {
+                "asphalt cutters": [
+                    {
+                        "artNo": 112226,
+                        "height": "525",
+                        "coupling": "S40",
+                        "cutting wheel": 400,
+                        "model": "centered",
+                        "weight": 52
+                    }
+                ]
+            }
+        }
+    ]
 ]
 

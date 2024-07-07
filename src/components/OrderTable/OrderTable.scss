@@ -2,6 +2,11 @@
   width: 100%;
 }
 
+.cart-item, .table-heading {
+  border-top: 1px solid grey;
+  padding: 10px 0;
+}
+
 .cart-item__info {
   display: flex;
   justify-content: space-between;
@@ -15,6 +20,7 @@
   .table-subcontainer {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: fit-content;
 
     p {
@@ -37,6 +43,7 @@
     display: flex;
     width: 100%;
     justify-content: space-between;
+    align-items: center;
 
     &.table-heading {
       padding-left: 100px;

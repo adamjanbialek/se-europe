@@ -1,7 +1,6 @@
 import './LinksListWithImages.scss';
 
 export const LinksListWithImages = (props) => {
-    {console.log(props)}
     return (
         <div className={'links-container'}>
             { props.data.map(product => {

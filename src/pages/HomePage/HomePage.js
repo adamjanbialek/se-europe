@@ -10,7 +10,7 @@ import forkLift from '../../assets/home/fork-lift.png';
 import {Link} from "react-router-dom";
 import {InstaFeed} from "../../components/InstaFeed/InstaFeed";
 
-export const HomePage = () => {
+export const HomePage = ({machines}) => {
     return (
         <main>
             <section className={'screenwide-photo-section'}>
@@ -50,42 +50,56 @@ export const HomePage = () => {
                 </div>
                 <div className={'list-container'}>
                     <div className={'vehicles-list'}>
-                        <Link className={'vehicle-link'} to="">
-                            <picture>
-                                <img src={wheelLoader}/>
-                            </picture>
-                            <p className={'vehicle-name link-title--smaller'}>ŁADOWARKA KOŁOWA</p>
-                        </Link>
-                        <Link className={'vehicle-link'} to="">
-                            <picture>
-                                <img src={excavator}/>
-                            </picture>
-                            <p className={'vehicle-name link-title--smaller'}>KOPARKA</p>
-                        </Link>
-                        <Link className={'vehicle-link'} to="">
-                            <picture>
-                                <img src={tractor}/>
-                            </picture>
-                            <p className={'vehicle-name link-title--smaller'}>TRAKTOR</p>
-                        </Link>
-                        <Link className={'vehicle-link'} to="">
-                            <picture>
-                                <img src={telescopicHandler}/>
-                            </picture>
-                            <p className={'vehicle-name link-title--smaller'}>PODNOŚNIK TELESKOPOWY</p>
-                        </Link>
-                        <Link className={'vehicle-link'} to="">
-                            <picture>
-                                <img src={skidLoader}/>
-                            </picture>
-                            <p className={'vehicle-name link-title--smaller'}>ŁADOWARKA SKRZYNKOWA</p>
-                        </Link>
-                        <Link className={'vehicle-link'} to="">
-                            <picture>
-                                <img src={forkLift}/>
-                            </picture>
-                            <p className={'vehicle-name link-title--smaller'}>WÓZEK WIDŁOWY</p>
-                        </Link>
+                        { machines.flat().map(product => {
+                            const el = <picture>
+                                <img src={product.category[2]} />
+                            </picture>;
+                            return (
+                                <a className={'vehicle-link'} href={`/moja-maszyna/${product.hasOwnProperty('category') ? product.category[0]: product.name}`}>
+                                    <div className={'bg-change'} />
+                                    {product.imgUrl ? el : ''}
+                                    <p className={'vehicle-name link-title--smaller'} >
+                                        {product.hasOwnProperty('category') ? product.category[1]: product.name}
+                                    </p>
+                                </a>
+                            )
+                        })}
+                        {/*<Link className={'vehicle-link'} to="">*/}
+                        {/*    <picture>*/}
+                        {/*        <img src={wheelLoader}/>*/}
+                        {/*    </picture>*/}
+                        {/*    <p className={'vehicle-name link-title--smaller'}>ŁADOWARKA KOŁOWA</p>*/}
+                        {/*</Link>*/}
+                        {/*<Link className={'vehicle-link'} to="">*/}
+                        {/*    <picture>*/}
+                        {/*        <img src={excavator}/>*/}
+                        {/*    </picture>*/}
+                        {/*    <p className={'vehicle-name link-title--smaller'}>KOPARKA</p>*/}
+                        {/*</Link>*/}
+                        {/*<Link className={'vehicle-link'} to="">*/}
+                        {/*    <picture>*/}
+                        {/*        <img src={tractor}/>*/}
+                        {/*    </picture>*/}
+                        {/*    <p className={'vehicle-name link-title--smaller'}>TRAKTOR</p>*/}
+                        {/*</Link>*/}
+                        {/*<Link className={'vehicle-link'} to="">*/}
+                        {/*    <picture>*/}
+                        {/*        <img src={telescopicHandler}/>*/}
+                        {/*    </picture>*/}
+                        {/*    <p className={'vehicle-name link-title--smaller'}>PODNOŚNIK TELESKOPOWY</p>*/}
+                        {/*</Link>*/}
+                        {/*<Link className={'vehicle-link'} to="">*/}
+                        {/*    <picture>*/}
+                        {/*        <img src={skidLoader}/>*/}
+                        {/*    </picture>*/}
+                        {/*    <p className={'vehicle-name link-title--smaller'}>ŁADOWARKA SKRZYNKOWA</p>*/}
+                        {/*</Link>*/}
+                        {/*<Link className={'vehicle-link'} to="">*/}
+                        {/*    <picture>*/}
+                        {/*        <img src={forkLift}/>*/}
+                        {/*    </picture>*/}
+                        {/*    <p className={'vehicle-name link-title--smaller'}>WÓZEK WIDŁOWY</p>*/}
+                        {/*</Link>*/}
                     </div>
                 </div>
             </section>

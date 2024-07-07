@@ -47,11 +47,14 @@ aside .aside__line-container:first-of-type .btn {
 
 .btn-sidebar--cart {
   background-color: #1d6cc1;
-  color: white;
+  color: white !important;
   transition: .2s all;
   width: 100%;
   margin-top: 5px;
   height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   &:hover {
     background-color: #175597;

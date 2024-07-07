@@ -97,10 +97,10 @@ function App() {
             <CartContext.Provider value={[cart, setCart]}>
                 <Router>
                     <NavbarComponent products={couplings} machines={machines}/>
-                    <SidebarComponent products={couplings}/>
+                    <SidebarComponent products={couplings} machines={machines}/>
                     <CartSidebar/>
                     <Routes basename="/se-europe-pl">
-                        <Route path="/" element={<HomePage />} />
+                        <Route path="/" element={<HomePage machines={machines} />} />
                         <Route path="/moje-zlacze">
                             <Route index  element={<MyCoupling products={couplings} />} />
                             {products.map(product => <Route path={`${product.id}`} element={<Se products={product} coupling={flattenArray(couplings)}
@@ -124,11 +124,11 @@ function App() {
                             {/* <Route path="3-punkt" element={<ThreePoint />} /> */}
                         </Route>
                         <Route path="/moja-maszyna">
-                            <Route index element={<MyMachine />} />
+                            <Route index element={<MyMachine machines={machines} />} />
+                            {products.map(product => <Route path={`${product.id}`} element={<Se products={product} coupling={flattenArray(couplings)}/>} />) }
                             {machines.map(el => Array.isArray(el) ?
                                 <>
                                     <Route path={`${el[0].category[0]}`} element={<CouplingGroup couplingName={`${el[0].category[1]}`} products={el} />} ></Route>
-                                    {console.log('adada')}
                                     {el.map(
                                         elem => <Route path={`${elem.url}`} element={<ThreePoint products={elem}/>}/>
                                     )}

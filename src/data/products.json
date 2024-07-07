@@ -8,9 +8,11 @@
     "imgText": "Bild visar: 3Punkt kat 2 till SMS/Euro",
     "description": ["SE Equipment offer you a simple solution to make your work more efficient.\nThrough an adapter from us with machine side 3 point kat 2 to\nequipment side SMS/Euro, you get the opportunity to mount one equipment\nwith another coupling than that for which the machine is adapted for. With our\nadapter you don´t have to put extra costs for buying new equipment or\nnew machine.","We present our adapter in great variety and in many different combinations but\nthey are all manufactured with a stable frame to withstand tougher grips.\nIf you have a job where you often need to switch between different devices,\nour adapter is the one optimal solution."],
     "benefits": ["Simple solution for more efficient work","Avoid buying a new machine or equipment","Many different models"],
+    "weight": 87,
     "technicalData": [["Capacity",2500],["Width",1134],["Height",781],["Weight",87],["Machine side","3 Punkt Kat 2"],["Equipment side","SMS/Euro"]],
     "price": 890,
-    "stock": 1
+    "stock": 1,
+    "favorite": true
   },
   {
     "id": 100839,
@@ -21,9 +23,11 @@
     "imgText": "Bild visar: 3Punkt kat 2 till SMS/Euro",
     "description": ["SE Equipment offer you a simple solution to make your work more efficient.\nThrough an adapter from us with machine side 3 point kat 2 to\nequipment side Big BM, you get the opportunity to mount one equipment\nwith another coupling than that for which the machine is adapted for. With our\nadapter you don´t have to put extra costs for buying new equipment or\nnew machine.","We present our adapter in great variety and in many different combinations but\nthey are all manufactured with a stable frame to withstand tougher grips.\nIf you have a job where you often need to switch between different devices,\nour adapter is the one optimal solution."],
     "benefits": ["Simple solution for more efficient work","Avoid buying a new machine or equipment","Many different models"],
+    "weight": 87,
     "technicalData": [["Capacity",2500],["Width",1134],["Height",781],["Weight",87],["Machine side","3 Punkt Kat 2"],["Equipment side","SMS/Euro"]],
     "price": 990,
-    "stock": 2
+    "stock": 2,
+    "favorite": true
   },
   {
     "id": 113542,
@@ -34,9 +38,11 @@
     "imgText": "Bild visar: Stora BM/3 punkt till SMS/Euro",
     "description": ["SE Equipment offer you a cheap and simple solution to make your work\nmore efficient. Through an adapter from us with machine side Big BM to\nequipment side SMS/Euro, you get the opportunity to mount one equipment\nwith another coupling than that for which the machine is adapted for. With our\nadapter you don´t have to put extra costs for buying new equipment or\nnew machine.","We present our adapter in great variety and in many different combinations but\nthey are all manufactured with a stable frame to withstand tougher grips, grease\nnipple for easy greasing and lever locking. If you have a job where you often need\nto switch between different devices, our adapter is the one optimal solution."],
     "benefits": ["Cheap and simple solution for more efficient work","Avoid buying a new machine or equipment","Many different models","Lever locking","Grease nipples for easy lubrication"],
+    "weight": 134,
     "technicalData": [["Type","Mekanisk"],["Capacity",2500],["Width",1184],["Height",492],["Weight",134],["Machine side","Big BM/3 point"],["Equipment side","SMS/Euro"],["Technical data has changed",""]],
     "price": 1090,
-    "stock": 2
+    "stock": 2,
+    "favorite": true
   },
   {
     "id": 113224,
@@ -47,9 +53,11 @@
     "imgText": "Bild visar: SMS 2000mm",
     "description": ["Stone fork with 3 point bracket from SE Equipment for tractor\nis a construction designed to pick and transport stones from\nfields and farmland. Our stone fork is also suitable for transporting\nbranches and brush. We use high-quality steel in the manufacturing\nprocess, allowing the stone fork with 3 point bracket to withstand\nhigh pressure and high stress that occurs when handling heavy materials.\n\n","The stone chamber and horns are designed to handle both large and small\nstones, and the stone chamber can hold a large volume of stones, reducing\nthe need of constant emptying. To prevent stones or other materials from falling\nout during shaking or transport, there is a prominent bump at the front of the\nstone fork."],
     "benefits": ["Cleans stones of different sizes","Large volume","Bump at the front","High-quality steel","Transport branches or brush"],
+    "weight": 335,
     "technicalData": [["Depth","1000mm"],["Width",2000],["Height",600],["Weight",335],["Coupling","3 punkt"],["Horn","35mm"],["Bump","YES"],["Technical data has changed",""]],
     "price": 2190,
-    "stock": 2
+    "stock": 2,
+    "favorite": false
   },
   {
     "id": 101299,
@@ -60,9 +68,11 @@
     "imgText": "",
     "description": [],
     "benefits": [],
+    "weight": 26,
     "technicalData": [["Weight",26],["Coupling","Cat 906"],["Variant","Right"]],
     "price": 140,
-    "stock": 2
+    "stock": 2,
+    "favorite": false
   },
   {
     "id": 101300,
@@ -73,9 +83,11 @@
     "imgText": "",
     "description": [],
     "benefits": [],
+    "weight": 26,
     "technicalData": [["Weight",26],["Coupling","Cat 906"],["Variant","Left"]],
     "price": 140,
-    "stock": 1
+    "stock": 1,
+    "favorite": false
   },
   {
     "id": 100997,
@@ -86,9 +98,11 @@
     "imgText": "",
     "description": [],
     "benefits": [],
+    "weight": 50,
     "technicalData": [["Weight",50],["Coupling","Atlas 35"],["Width","1200mm"],["Capacity",2500]],
     "price": 420,
-    "stock": 1
+    "stock": 1,
+    "favorite": false
   },
   {
     "id": 101281,
@@ -100,9 +114,11 @@
     "description": ["Couplings from SE Equipment that fit all types of equipment and machinery.",
       "The couplings are cut from high quality steel to provide the best possible life span."],
     "benefits": [],
+    "weight": 8,
     "technicalData": [["Weight",8],["Coupling","Atlas 35"]],
     "price": 110,
-    "stock": 1
+    "stock": 1,
+    "favorite": false
   },
   {
     "id": 112475,
@@ -114,9 +130,11 @@
     "description": ["SE Equipment offer you a cheap and simple solution to make your work\nmore efficient. Through an adapter from us with machine side Atlas 65 to\nequipment side Stora BM, you get the opportunity to mount one equipment\nwith another coupling than that for which the machine is adapted for. With our\nadapter you don´t have to put extra costs for buying new equipment or\nnew machine.",
       "We present our adapter in great variety and in many different combinations but\nthey are all manufactured with a stable frame to withstand tougher grips, grease\nnipple for easy greasing and lever locking. If you have a job where you often need\nto switch between different devices, our adapter is the one optimal solution."],
     "benefits": ["Cheap and simple solution for more efficient work","Avoid buying a new machine or equipment","Many different models","Lever locking","Grease nipples for easy lubrication"],
+    "weight": 134,
     "technicalData": [["Capacity","5000"],["Weight",134],["Width","1165"],["Length","310"],["Height","850"],["Machine side","Atlas 65"],["Equipment side","Big BM"],["Technical data has changed"]],
     "price": 990,
-    "stock": 1
+    "stock": 1,
+    "favorite": false
   },
   {
     "id": 100999,
@@ -127,9 +145,41 @@
     "imgText": "",
     "description": [],
     "benefits": [],
+    "weight": 108,
     "technicalData": [["Capacity","5000"],["Weight",108],["Width","1200"],["Coupling","Atlas 95"],["Technical data has changed"]],
     "price": 630,
-    "stock": 1
+    "stock": 1,
+    "favorite": false
+  },
+  {
+    "id": 112226,
+    "heading": "Asphalt cutter for excavator",
+    "title": "S40 ASPHALT CUTTER CENTERED",
+    "subtitle": "Cut fine cuts with precision.",
+    "imgUrl": "https://se-europe.com/images/prod500/S40_asfaltssk%c3%a4rare_gr%c3%a4vmaskin.png",
+    "imgText": "Bilden visar: S40 asfaltsskärare",
+    "description": ["This asphalt cutter with S40 couplings from SE Equipment\nis adapted for efficient cutting of asphalt in construction work.\nThe design makes the asphalt cutter lightweight and easy to use.\nWith its high-quality wheel made of HB500 material, the asphalt\ncutter is also an optimal machine equipment for surfaces that\nrequire precision, such as fine cuts on grassy areas and other locations.","With our asphalt cutter, you can avoid expensive costs of unnecessary\nasphalt removal. We also manufacture according to your preferences\nregarding design, size etc."],
+    "benefits": [],
+    "weight": 108,
+    "technicalData": [["Capacity","5000"],["Weight",108],["Width","1200"],["Coupling","Atlas 95"],["Technical data has changed"]],
+    "price": 890,
+    "stock": 1,
+    "favorite": false
+  },
+  {
+    "id": 112697,
+    "heading": "Crane jib for telescopic handler",
+    "title": "MANITOU CRANE JIB 3T 1000MM",
+    "subtitle": "Lift your goods safely with our crane jib.",
+    "imgUrl": "https://se-europe.com/images/prod500/Manitou_materialhanteringsarm_3ton_teleskoplastare.png",
+    "imgText": "Bild visar: Manitou 3 ton",
+    "description": ["The crane jib with Manitou bracket from SE Equipment is constructed with a focus on safety and quality. Designed with a fixed arm so you easily can maneuver your lifts.With this crane jib you can handle goods weighing up to 3000 kg.","All our crane jibs are designed with focus on safety and quality. Please note that the capacity in technical data only shows the capacity of the crane jib, not combined with machine."],
+    "benefits": ["Fixed arm","Focus on safety and quality","Focus on safety and quality"],
+    "weight": 124,
+    "technicalData": [["Min/Max capacity","650/3000 kg"],["Weight",124],["Width","886"],["Coupling","Manitou"],["Technical data has changed"]],
+    "price": 1690,
+    "stock": 1,
+    "favorite": true
   }
 ]
 

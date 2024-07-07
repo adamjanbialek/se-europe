@@ -5,7 +5,7 @@
       "name": "ADAPTER FOR WHEEL AND SKID LOADER",
       "imgUrl": "https://se-europe.com/images/prod630/adapter_hjullastare_se_equipment.png",
       "description": "With an adapter from SE Equipment, you have the ability to attach a equipment with a\ndifferent bracket than the machine is designed for. If you have an adapter for your\nwheel loader/skid loader, you can avoid the additional costs of purchasing a new machine\nor equipment, simply attach the equipment to the adapter. A convenient sulotion for those who\nfrequently switch between equipments. At SE Equipment, we offer a wide variety of adapters\nin our range.\n\nClick on the item number in the table below for more product information.",
-      "category": ["ladowarka-kolowa", "Ładowarka kołowa"],
+      "category": ["ladowarka-kolowa", "Ładowarka kołowa","https://se-europe.com/images/prod630/HJULLASTARE_START_2.png"],
       "tableData": {
         "2500kg": [
           {
@@ -36,11 +36,32 @@
   ],
   [
     {
+      "url": "asphalt-cutter",
+      "name": "Asphalt cutter",
+      "imgUrl": "https://se-europe.com/images/prod500/S40_asfaltssk%c3%a4rare_gr%c3%a4vmaskin.png",
+      "description": "With an adapter from SE Equipment you have the option of mounting an equipment with a different coupling than what the machine is adapted for.\n\nClick at the article number in the list below for more product information.",
+      "category": ["koparka", "Koparka","https://seequipment.se/images/site/GRAVMASKIN_START_2.png"],
+      "tableData": {
+        "650/3000": [
+          {
+            "artNo": 112226,
+            "coupling": "S40",
+            "height": "525",
+            "cutting wheel": 400,
+            "model": "centered",
+            "weight": 52
+          }
+        ]
+      }
+    }
+  ],
+  [
+    {
       "url": "adapter-tractor",
       "name": "ADAPTER",
       "imgUrl": "https://se-europe.com/images/prod630/100839_vit.png",
       "description": "With an adapter from SE Equipment you have the option of mounting an equipment with a different coupling than what the machine is adapted for.\n\nClick at the article number in the list below for more product information.",
-      "category": ["traktor", "Traktor"],
+      "category": ["traktor", "Traktor","https://se-europe.com/images/prod630/TRAKTOR_START_2.png"],
       "tableData": {
         "2500kg": [
           {
@@ -64,6 +85,25 @@
             "machineSide": "3punkt",
             "equipmentSide": "Stora BM",
             "weight": 121
+          }
+        ]
+      }
+    }
+  ],
+  [
+    {
+      "url": "crane-jib",
+      "name": "Crane jib",
+      "imgUrl": "https://se-europe.com/images/prod630/112697.1092.png",
+      "description": "The crane jib from SE Equipment is designed with a focus on reliability and safety.\nAll our crane jibs have a safety stop that prevents the lifting arm from slipping out of the fixed cavity.\n\nClick at the article number in the list below for more product information.",
+      "category": ["ladowarka-teleskopowa", "Ładowarka teleskopowa","https://seequipment.se/images/site/TELESKOPLASTARE_START.png"],
+      "tableData": {
+        "650/3000": [
+          {
+            "artNo": 112697,
+            "coupling": "Manitou",
+            "model": "Solid arm",
+            "weight": 124
           }
         ]
       }

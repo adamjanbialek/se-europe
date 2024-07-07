@@ -3,11 +3,11 @@ import './ThankYou.scss';
 
 export const ThankYou = () => {
     return (
-        <main>
+        <main className={'checkout-page'}>
             <section className={'section-contrains tables-page thank-page'}>
                 <h1 className={'page-title'}>PODSUMOWANIE</h1>
                 <br/>
-                <h2>DZIĘKUJEMY ZA TWOJE ZAMÓWIENIE</h2>
+                <h1 className={'page-title'}>DZIĘKUJEMY ZA TWOJE ZAMÓWIENIE</h1>
                 <br/>
                 <div>
                     {/* TODO: trzeba dynamicznie pobierać numer zamówienia z bazy */}
