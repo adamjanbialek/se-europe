@@ -113,7 +113,7 @@ function App() {
                             {/* <Route path=":product" element={<Coupling/>} /> */}
                             {couplings.map(el => Array.isArray(el) ?
                                 <>
-                                    <Route path={`${el[0].couplings[0]}`} element={<CouplingGroup couplingName={`${el[0].couplings[1]}`} products={el} />} ></Route>
+                                    <Route path={`${el[0].couplings[0]}`}  element={<CouplingGroup couplingName={`${el[0].couplings[1]}`} products={el} />} ></Route>
                                     {el.map(
                                         elem => <Route path={`${elem.url}`} element={<ThreePoint products={elem}/>}/>
                                     )}
