@@ -1,7 +1,14 @@
 import {OrderTable} from "../OrderTable/OrderTable";
 import './ThankYou.scss';
+import {useContext} from "react";
+import {CartContext, OrderAndDeliveryContext} from "../../App";
 
 export const ThankYou = () => {
+    const [orderAndDelivery, setOrderAndDelivery] = useContext(OrderAndDeliveryContext);
+    const [cart, setCart] = useContext(CartContext);
+    console.log('Order:');
+    console.log({...orderAndDelivery});
+    console.log({...cart});
     return (
         <main className={'checkout-page'}>
             <section className={'section-contrains tables-page thank-page'}>

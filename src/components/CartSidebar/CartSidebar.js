@@ -2,7 +2,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faXmark} from "@fortawesome/free-solid-svg-icons";
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 import {useContext} from "react";
-import {CartContext} from "../../App";
+import {CartContext, OrderAndDeliveryContext} from "../../App";
 import {Context} from "../../App";
 import './CartSidebar.scss';
 import {CheckoutComponent} from "../CheckoutComponent/CheckoutComponent";
@@ -11,6 +11,7 @@ import {Link} from "react-router-dom";
 export const CartSidebar = () => {
     const [cart, setCart] = useContext(CartContext);
     const [toggleCartSidebar, setToggleCartSidebar] = useContext(Context);
+    const [orderAndDelivery, setOrderAndDelivery] = useContext(OrderAndDeliveryContext);
 
     return (
         <aside className={`aside-container--cart ${!toggleCartSidebar.cartSidebar ? 'aside-container--hidden' : ''}`}>
@@ -26,8 +27,8 @@ export const CartSidebar = () => {
                 {cart.length ? (
                         <>
                             <div className={`aside__line-container aside__line-container--cart`}>
-                                <Link className={'btn-sidebar--cart'} to={'/checkout'} element={<CheckoutComponent/>}>Do kasy</Link>
-                                <Link className={'btn-sidebar--cart'} to={'/checkout'} element={<CheckoutComponent/>}>Złożenie oferty</Link>
+                                <Link className={'btn-sidebar--cart'} to={'/checkout'} element={<CheckoutComponent/>} onClick={() => {setOrderAndDelivery({order: true, delivery: orderAndDelivery.delivery})}}>Do kasy</Link>
+                                <Link className={'btn-sidebar--cart'} to={'/checkout'} element={<CheckoutComponent/>} onClick={() => {setOrderAndDelivery({order: false, delivery: orderAndDelivery.delivery})}}>Złożenie oferty</Link>
                                 <div className={'info-container'}>
                                     <p>{cart.reduce((acc, el) => acc + el.quantity, 0)} produkt(ów)</p>
                                     <p>Koszt {cart.reduce((acc,el) => acc + (el.price * el.quantity), 0 )} <br></br>

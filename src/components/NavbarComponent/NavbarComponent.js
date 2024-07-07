@@ -96,9 +96,9 @@ export const NavbarComponent = (props) => {
                 <div className={'nav--bottom text-shadow'}>
 
                     <ul className="nav__menu">
-                        <li className={'icon-item'}>
-                            <FontAwesomeIcon className={'sidebar-icon'} icon={faMagnifyingGlass} />
-                        </li>
+                        {/*<li className={'icon-item'}>*/}
+                        {/*    <FontAwesomeIcon className={'sidebar-icon'} icon={faMagnifyingGlass} />*/}
+                        {/*</li>*/}
                         <li className="nav__menu-item">
                             <a className={'link-container'}>
                                 Moje złącze

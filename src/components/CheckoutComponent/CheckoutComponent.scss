@@ -13,8 +13,37 @@
     }
   }
 
+  input {
+    width: fit-content;
+  }
+
+  .table-heading {
+    width: 100% !important;
+  }
+
+  form {
+    .field-container {
+      label {
+        width: 250px;
+      }
+      input, textarea {
+        width: 100%;
+      }
+      textarea {
+        height: auto;
+      }
+    }
+  }
+
   .total-info {
     text-align: center !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    span {
+      text-align: center;
+    }
   }
 
   .total--partial {
@@ -35,6 +64,21 @@
     &__titles {
       display: flex;
       justify-content: space-between;
+      align-items: center;
+
+      &--alt {
+        justify-content: flex-end;
+
+        .btn-sidebar--cart {
+          margin: unset;
+          margin-inline: 15px;
+        }
+      }
+
+      input {
+        margin-left: 20px;
+        max-width: 300px;
+      }
     }
   }
 

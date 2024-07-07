@@ -19,10 +19,9 @@ export const Se = (props) => {
         <main className='product-page'>
             <ThreePoint products={props.coupling.filter(el => Object.values(el.tableData).flat().find(el => el.artNo === props.products.id))[0]}></ThreePoint>
             {/*{console.log(props.coupling.map(el => Object.values(el.tableData).flat()).filter(el => el.find(elem => elem.artNo === props.products.id)))}*/}
-            <h2>{props.products.heading}</h2>
             <section className={'section-contrains tables-page item-page'}>
                 <div>
-                    <h1>{props.products.title}</h1>
+                    <h1 className={'page-title'}>{props.products.title}</h1>
                     <p>{props.products.id}</p>
                     <br></br>
                     <h2>{props.products.subtitle}</h2>
@@ -57,13 +56,13 @@ export const Se = (props) => {
                     <div className='price-container'>
                         <h2>{props.products.price}.00</h2>
                     </div>
-                    <br></br>
-                    <div className={'item-quantity'}>
-                        <button className='quantity-btn'>-</button>
-                        <p>0</p>
-                        <button className='quantity-btn' >+</button>
-                        <button className='buy-btn btn-container'>BUY</button>
-                    </div>
+                    {/*<br></br>*/}
+                    {/*<div className={'item-quantity'}>*/}
+                    {/*    <button className='quantity-btn'>-</button>*/}
+                    {/*    <p>0</p>*/}
+                    {/*    <button className='quantity-btn' >+</button>*/}
+                    {/*    <button className='buy-btn btn-container'>BUY</button>*/}
+                    {/*</div>*/}
                 </div>
                 <div>
                     <img src={props.products.imgUrl}/>
