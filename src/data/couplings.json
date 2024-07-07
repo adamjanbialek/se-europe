@@ -94,16 +94,6 @@
                         "machineSide": "atlas 65",
                         "equipmentSide": "Stora BM",
                         "weight": 134
-                    },
-                    {
-                        "artNo": 112476,
-                        "coupling": "atlas 65",
-                        "width": 1184,
-                        "height": 492,
-                        "capacity": 2500,
-                        "machineSide": "atlas 65",
-                        "equipmentSide": "SMS/Euro",
-                        "weight": 79
                     }
                 ]
             }
@@ -122,13 +112,6 @@
                         "width": 1200,
                         "capacity": 5000,
                         "weight": 108
-                    }
-                ],
-                "redskapsfaste": [
-                    {
-                        "artNo": 101287,
-                        "coupling": "atlas 95",
-                        "weight": 20
                     }
                 ]
             }

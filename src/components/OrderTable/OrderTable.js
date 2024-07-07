@@ -10,21 +10,41 @@ export const OrderTable = () => {
     return (
         <div className={'aside__line-container aside__line-container--column'}>
             <ul className={'cart-item-container cart-item-container--checkout'}>
+                <li className={'table-heading'}>
+                    <div className={'table-subcontainer'}>
+                        <p className={'serial'}>Nr seryjny</p>
+                        <p>Nazwa</p>
+                    </div>
+                    <div className={'table-subcontainer'}>
+                        <p>Cena</p>
+                        <p className={'total'}>Ilość</p>
+                        <p className={'total'}>Łącznie</p>
+                    </div>
+                </li>
                 {cart.map(product => {
                     return (
-                        <div className={'cart-item'}>
+                        <li className={'cart-item'}>
                             <div className={'cart-img-container'}>
-                                <span>{product.quantity}</span>
                                 <img className={'cart-img'} src={product.imgUrl}/>
                             </div>
                             <div className={'cart-item__info'}>
-                                <p>{product.id}</p>
-                                <h3>{product.title}</h3>
-                                <p>{product.price}</p>
-                                <p>Łacznie: ${product.price * product.quantity}</p>
+                                <div className={'table-subcontainer'}>
+                                    <p className={'serial'}>{product.id}</p>
+                                    <p>{product.title}</p>
+                                </div>
+                                <div className={'table-subcontainer'}>
+                                    <p>{product.price}</p>
+                                    <p className={'total'}>{product.quantity}</p>
+                                    <p className={'total'}>{product.price * product.quantity}</p>
+                                </div>
                             </div>
-                            <FontAwesomeIcon className={'btn btn--close'} icon={faXmark} />
-                        </div>
+                            <FontAwesomeIcon className={'btn btn--close'} icon={faXmark} onClick={() => {
+                                cart.filter(cartItem => cartItem.id === product.id).forEach(cartItem => {
+                                    cartItem.quantity = 0
+                                })
+                                setCart([...cart.filter(cartItem => cartItem.id !== product.id)]);
+                                console.log(cart)}}/>
+                        </li>
                     )
                 })}
             </ul>

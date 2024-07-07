@@ -49,7 +49,12 @@ export const CartSidebar = () => {
                                                     <p>{product.price}</p>
                                                     <p>Sztuk: ${product.price * product.quantity}</p>
                                                 </div>
-                                                <FontAwesomeIcon className={'btn btn--close'} icon={faXmark} />
+                                                <FontAwesomeIcon className={'btn btn--close'} icon={faXmark} onClick={() => {
+                                                    cart.filter(cartItem => cartItem.id === product.id).forEach(cartItem => {
+                                                        cartItem.quantity = 0
+                                                    })
+                                                    setCart([...cart.filter(cartItem => cartItem.id !== product.id)]);
+                                                    console.log(cart)}}/>
                                             </div>
                                         )
                                     })}

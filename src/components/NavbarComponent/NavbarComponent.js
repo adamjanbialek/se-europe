@@ -68,7 +68,7 @@ export const NavbarComponent = (props) => {
                     </Link>
                     <div className={'icons-container'}>
                         <div>
-                            <Link className={'icon'} target="_blank">
+                            <Link to={'/'} className={'icon'}>
                                 <img src={poland} className={'langs'}/>
                             </Link>
                         </div>

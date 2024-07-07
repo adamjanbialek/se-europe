@@ -4,9 +4,43 @@
 
 .cart-item__info {
   display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .cart-item-container--checkout {
   height: fit-content;
   overflow-y: auto;
+
+  .table-subcontainer {
+    display: flex;
+    justify-content: space-between;
+    width: fit-content;
+
+    p {
+      &.serial {
+        width: 75px;
+      }
+
+      &.total {
+        width: 80px;
+        text-align: right;
+      }
+
+      &:not(:first-of-type) {
+        margin-left: 50px;
+      }
+    }
+  }
+
+  li {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+    &.table-heading {
+      padding-left: 100px;
+      padding-right: 12px;
+    }
+  }
 }

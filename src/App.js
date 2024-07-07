@@ -36,6 +36,7 @@ import jsonCouplings from './data/couplings.json';
 import jsonProducts from './data/products.json';
 import {CartSidebar} from "./components/CartSidebar/CartSidebar";
 import {CheckoutComponent} from "./components/CheckoutComponent/CheckoutComponent";
+import {ThankYou} from "./components/ThankYou/ThankYou";
 
 export const Context = createContext({sidebar: false, cartSidebar: false});
 export const ProductContext = createContext(false);
@@ -142,6 +143,7 @@ function App() {
                             <Route path="przeglad-faktur" element={<InvoiceOverview />} />
                         </Route>
                         <Route path="/checkout" element={<CheckoutComponent />} />
+                        <Route path="/thank-you-page" element={<ThankYou />} />
                         <Route path="/pomoc-nowy-klient" element={<NewCustomer />} />
                         <Route path="/pomoc-jak-zamawiac" element={<HowToShop />} />
                         <Route path="/pomoc-jak-szukac" element={<HowToSearch />} />

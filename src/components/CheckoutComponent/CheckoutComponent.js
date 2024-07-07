@@ -1,6 +1,7 @@
 import './CheckoutComponent.scss';
 import {Link} from "react-router-dom";
 import {OrderTable} from "../OrderTable/OrderTable";
+import {ThankYou} from "../ThankYou/ThankYou";
 
 export const CheckoutComponent = () => {
 
@@ -43,8 +44,8 @@ export const CheckoutComponent = () => {
                 </div>
                 <div className={'info-container'}>
                     <div className={'info-item'}>
-                        <h2>Complete order</h2>
-                        <Link>COMPLETE ORDER</Link>
+                        <h2>Złóż zamówienie</h2>
+                        <Link className={'btn-sidebar--cart'} to={'/thank-you-page'} element={<ThankYou/>}>ZŁÓŻ ZAMÓWIENIE</Link>
                     </div>
                 </div>
             </section>
