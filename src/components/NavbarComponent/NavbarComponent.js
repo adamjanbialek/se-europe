@@ -138,24 +138,44 @@ export const NavbarComponent = (props) => {
                                 <FontAwesomeIcon icon={faAngleDown} className={'angle-up angle-up--main'} />
                             </a>
                             <ul className="nav__submenu">
-                                <li className="nav__submenu-item ">
-                                    <Link to={'/moja-maszyna/ladowarka-kolowa'} element={<WheelLoader />}>Ładowarka kołowa</Link>
-                                </li>
-                                <li className="nav__submenu-item ">
-                                    <Link to={'/moja-maszyna/koparka'} element={<Excavator />}>Koparka</Link>
-                                </li>
-                                <li className="nav__submenu-item ">
-                                    <Link to={'/moja-maszyna/traktor'} element={<Tractor />}>Traktor</Link>
-                                </li>
-                                <li className="nav__submenu-item ">
-                                    <Link to={'/moja-maszyna/ladowarka-teleskopowa'} element={<TelescopicHandler />}>Ładowarka teleskopowa</Link>
-                                </li>
-                                <li className="nav__submenu-item ">
-                                    <Link to={'/moja-maszyna/wozek-widlowy'} element={<Forklift />}>Wózek widłowy</Link>
-                                </li>
-                                <li className="nav__submenu-item ">
-                                    <Link to={'/moja-maszyna/bez-zlacz'} element={<WithoutCoupling />}>Bez złącz</Link>
-                                </li>
+                                {props.machines.map(el => Array.isArray(el) ?
+                                    <>
+                                        {
+                                            <>
+                                                <li className="nav__submenu-item nav__submenu-item--list">
+                                                    <Link to={`/moja-maszyna/${el[0].category[0]}`} element={<ThreePoint />}>
+                                                        {el[0].category[1]}
+                                                    </Link>
+                                                </li>
+                                            </>
+
+                                        }
+                                    </>
+                                    :
+                                    <>
+                                        <li className="nav__submenu-item ">
+                                            <Link to={`/moja-maszyna/${el.url}`}>{el.name}</Link>
+                                        </li>
+                                    </>
+                                )}
+                                {/*<li className="nav__submenu-item ">*/}
+                                {/*    <Link to={'/moja-maszyna/ladowarka-kolowa'} element={<WheelLoader />}>Ładowarka kołowa</Link>*/}
+                                {/*</li>*/}
+                                {/*<li className="nav__submenu-item ">*/}
+                                {/*    <Link to={'/moja-maszyna/koparka'} element={<Excavator />}>Koparka</Link>*/}
+                                {/*</li>*/}
+                                {/*<li className="nav__submenu-item ">*/}
+                                {/*    <Link to={'/moja-maszyna/traktor'} element={<Tractor />}>Traktor</Link>*/}
+                                {/*</li>*/}
+                                {/*<li className="nav__submenu-item ">*/}
+                                {/*    <Link to={'/moja-maszyna/ladowarka-teleskopowa'} element={<TelescopicHandler />}>Ładowarka teleskopowa</Link>*/}
+                                {/*</li>*/}
+                                {/*<li className="nav__submenu-item ">*/}
+                                {/*    <Link to={'/moja-maszyna/wozek-widlowy'} element={<Forklift />}>Wózek widłowy</Link>*/}
+                                {/*</li>*/}
+                                {/*<li className="nav__submenu-item ">*/}
+                                {/*    <Link to={'/moja-maszyna/bez-zlacz'} element={<WithoutCoupling />}>Bez złącz</Link>*/}
+                                {/*</li>*/}
                             </ul>
                         </li>
                         <li className="nav__menu-item">

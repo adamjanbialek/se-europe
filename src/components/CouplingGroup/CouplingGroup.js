@@ -8,6 +8,7 @@ export const CouplingGroup = (props) => {
                 <h1 className={'page-title'}>{props.couplingName}</h1>
             </div>
             <div className={'available-choices-container links-container coupling-group-item'}>
+                {console.log(props)}
             { props.products.map(product => {
                 const el = <picture>
                     <img src={product.imgUrl} />

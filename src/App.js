@@ -34,6 +34,7 @@ import { Coupling } from './components/Coupling/Coupling';
 import { CouplingGroup } from './components/CouplingGroup/CouplingGroup';
 import jsonCouplings from './data/couplings.json';
 import jsonProducts from './data/products.json';
+import jsonMachines from './data/machines.json';
 import {CartSidebar} from "./components/CartSidebar/CartSidebar";
 import {CheckoutComponent} from "./components/CheckoutComponent/CheckoutComponent";
 import {ThankYou} from "./components/ThankYou/ThankYou";
@@ -76,6 +77,7 @@ function App() {
 
     let couplings = JSON.parse(JSON.stringify(jsonCouplings, null, 2));
     let products = JSON.parse(JSON.stringify(jsonProducts, null, 2));
+    let machines = JSON.parse(JSON.stringify(jsonMachines, null, 2));
 
     function flattenArray(arr) {
         return arr.reduce((acc, val) => {
@@ -94,7 +96,7 @@ function App() {
         <AuthContext.Provider value={[user, setUser]}>
             <CartContext.Provider value={[cart, setCart]}>
                 <Router>
-                    <NavbarComponent products={couplings}/>
+                    <NavbarComponent products={couplings} machines={machines}/>
                     <SidebarComponent products={couplings}/>
                     <CartSidebar/>
                     <Routes basename="/se-europe-pl">
@@ -123,12 +125,23 @@ function App() {
                         </Route>
                         <Route path="/moja-maszyna">
                             <Route index element={<MyMachine />} />
-                            <Route path="ladowarka-kolowa" element={<WheelLoader />} />
-                            <Route path="koparka" element={<Excavator />} />
-                            <Route path="traktor" element={<Tractor />} />
-                            <Route path="ladowarka-teleskopowa" element={<TelescopicHandler />} />
-                            <Route path="wozek-widlowy" element={<Forklift />} />
-                            <Route path="bez-zlacz" element={<WithoutCoupling />} />
+                            {machines.map(el => Array.isArray(el) ?
+                                <>
+                                    <Route path={`${el[0].category[0]}`} element={<CouplingGroup couplingName={`${el[0].category[1]}`} products={el} />} ></Route>
+                                    {console.log('adada')}
+                                    {el.map(
+                                        elem => <Route path={`${elem.url}`} element={<ThreePoint products={elem}/>}/>
+                                    )}
+                                </>
+                                :
+                                <Route path={`${el.url}`} element={<ThreePoint products={el}/>}/>
+                            )}
+                            {/*<Route path="ladowarka-kolowa" element={<WheelLoader />} />*/}
+                            {/*<Route path="koparka" element={<Excavator />} />*/}
+                            {/*<Route path="traktor" element={<Tractor />} />*/}
+                            {/*<Route path="ladowarka-teleskopowa" element={<TelescopicHandler />} />*/}
+                            {/*<Route path="wozek-widlowy" element={<Forklift />} />*/}
+                            {/*<Route path="bez-zlacz" element={<WithoutCoupling />} />*/}
                         </Route>
                         <Route path="/o-nas">
                             <Route path="kontakt" element={<Contact />} />

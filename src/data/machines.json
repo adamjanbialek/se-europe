@@ -5,7 +5,7 @@
       "name": "ADAPTER FOR WHEEL AND SKID LOADER",
       "imgUrl": "https://se-europe.com/images/prod630/adapter_hjullastare_se_equipment.png",
       "description": "With an adapter from SE Equipment, you have the ability to attach a equipment with a\ndifferent bracket than the machine is designed for. If you have an adapter for your\nwheel loader/skid loader, you can avoid the additional costs of purchasing a new machine\nor equipment, simply attach the equipment to the adapter. A convenient sulotion for those who\nfrequently switch between equipments. At SE Equipment, we offer a wide variety of adapters\nin our range.\n\nClick on the item number in the table below for more product information.",
-      "category": ["adapter", "Adapter"],
+      "category": ["ladowarka-kolowa", "Ładowarka kołowa"],
       "tableData": {
         "2500kg": [
           {
@@ -36,11 +36,11 @@
   ],
   [
     {
-      "url": "adapter",
+      "url": "adapter-tractor",
       "name": "ADAPTER",
       "imgUrl": "https://se-europe.com/images/prod630/100839_vit.png",
       "description": "With an adapter from SE Equipment you have the option of mounting an equipment with a different coupling than what the machine is adapted for.\n\nClick at the article number in the list below for more product information.",
-      "category": ["adapter", "Adapter"],
+      "category": ["traktor", "Traktor"],
       "tableData": {
         "2500kg": [
           {
