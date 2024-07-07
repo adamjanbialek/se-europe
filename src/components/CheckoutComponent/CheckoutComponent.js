@@ -64,7 +64,7 @@ export const CheckoutComponent = () => {
                         <br />
                         <div className={''}>
                             <p className={'section-subtitle total-info'}>
-                                {cart.reduce((acc, item) => acc + (item.price * item.quantity), 0)}
+                                {cart.reduce((acc, item)  => acc + (item.price * item.quantity), 0)}
                             </p>
                             <div className={'total--partial'}>
                                 <p>Ilość przedmiotów</p>
