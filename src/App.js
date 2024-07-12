@@ -100,7 +100,7 @@ function App() {
         <AuthContext.Provider value={[user, setUser]}>
             <CartContext.Provider value={[cart, setCart]}>
                 <OrderAndDeliveryContext.Provider value={[orderAndDelivery, setOrderAndDelivery]}>
-                    <Router basename="/se-europe-pl">
+                    <Router >
                         <NavbarComponent products={couplings} machines={machines}/>
                         <SidebarComponent products={couplings} machines={machines}/>
                         <CartSidebar/>
@@ -108,39 +108,34 @@ function App() {
                             <Route path="/" element={<HomePage machines={machines} />} />
                             <Route path="/moje-zlacze">
                                 <Route index  element={<MyCoupling products={couplings} />} />
-                                {products.map(product => <Route path={`${product.id}`} element={<Se products={product} coupling={flattenArray(couplings)}
+                                {products.map((product, key) => <Route key={key} path={`${product.id}`} element={<Se products={product} coupling={flattenArray(couplings)}/>} />) }
 
-                                                                                          // coupling={couplings.filter(elem => Object.values(elem.tableData))}
-                                />} />) }
-                                {/*{console.log(flattenArray(couplings).map(el => Object.values(el.tableData).flat().filter(el => el.artNo === 100838)).flat().find(el => el.artNo === 100838))*/}
-                                {/*    console.log(Object.values(elem.tableData).flat().filter(el => el.artNo === 100838))*/}
-                                {/*}*/}
-                                {/* <Route path=":product" element={<Coupling/>} /> */}
-                                {couplings.map(el => Array.isArray(el) ?
-                                    <>
-                                        <Route path={`${el[0].couplings[0]}`}  element={<CouplingGroup couplingName={`${el[0].couplings[1]}`} products={el} />} ></Route>
+                                {couplings.map((el,key) => Array.isArray(el) ?
+                                    <Route path="" key={key}>
+                                        <Route key={`group-${key}`} path={`${el[0].couplings[0]}`}  element={<CouplingGroup key={key} couplingName={`${el[0].couplings[1]}`} products={el} />} ></Route>
                                         {el.map(
-                                            elem => <Route path={`${elem.url}`} element={<ThreePoint products={elem}/>}/>
+                                            (elem, subIndex) => <Route key={`item-${key}-${subIndex}`} path={`${elem.url}`} element={<ThreePoint key={key} products={elem}/>}/>
                                         )}
-                                    </>
+                                    </Route>
                                     :
-                                    <Route path={`${el.url}`} element={<ThreePoint products={el}/>}/>
+                                    <Route key={key} path={`${el.url}`} element={<ThreePoint products={el}/>}/>
                                 )}
-                                {/* <Route path="3-punkt" element={<ThreePoint />} /> */}
                             </Route>
                             <Route path="/moja-maszyna">
                                 <Route index element={<MyMachine machines={machines} />} />
-                                {products.map(product => <Route path={`${product.id}`} element={<Se products={product} coupling={flattenArray(couplings)}/>} />) }
-                                {machines.map(el => Array.isArray(el) ?
-                                    <>
-                                        <Route path={`${el[0].category[0]}`} element={<CouplingGroup couplingName={`${el[0].category[1]}`} products={el} />} ></Route>
+
+                                {products.map((product,key) => <Route key={key} path={`${product.id}`} element={<Se key={key} products={product} coupling={flattenArray(couplings)}/>} />) }
+                                {machines.map((el,key) => Array.isArray(el) ?
+                                    <Route key={key} path="">
+                                        <Route key={key} path={`${el[0].category[0]}`} element={<CouplingGroup couplingName={`${el[0].category[1]}`} products={el} />} ></Route>
                                         {el.map(
-                                            elem => <Route path={`${elem.url}`} element={<ThreePoint products={elem}/>}/>
+                                            (elem, key) => <Route key={key} path={`${elem.url}`} element={<ThreePoint products={elem}/>}/>
                                         )}
-                                    </>
+                                    </Route>
                                     :
-                                    <Route path={`${el.url}`} element={<ThreePoint products={el}/>}/>
+                                    <Route key={key} path={`${el.url}`} element={<ThreePoint products={el}/>}/>
                                 )}
+
                                 {/*<Route path="ladowarka-kolowa" element={<WheelLoader />} />*/}
                                 {/*<Route path="koparka" element={<Excavator />} />*/}
                                 {/*<Route path="traktor" element={<Tractor />} />*/}

@@ -105,29 +105,27 @@ export const NavbarComponent = (props) => {
                                 <FontAwesomeIcon icon={faAngleDown} className={'angle-up angle-up--main'} />
                             </a>
                             <ul className="nav__submenu">
-                                {props.products.map(el => Array.isArray(el) ? 
-                                    <>
-                                    {
-                                        <>
-                                            <li className="nav__submenu-item nav__submenu-item--list">
+                                {props.products.map((el,key) => Array.isArray(el) ?
+
+
+                                            <li key={key} className="nav__submenu-item nav__submenu-item--list">
                                                 <Link to={`/moje-zlacze/${el[0].couplings[0]}`} element={<ThreePoint />}>
                                                     {el[0].couplings[1]}
                                                     <FontAwesomeIcon icon={faAngleDown} className={'angle-up'} />
                                                 </Link>
                                                 <ul>
-                                                    {el.map(elem => <li><Link to={`/moje-zlacze/${elem.url}`}> {elem.name}</Link></li>)}
+                                                    {el.map((elem,key) => <li key={key}><Link to={`/moje-zlacze/${elem.url}`}> {elem.name}</Link></li>)}
                                                 </ul>
                                             </li>
-                                        </>
+
                                     
-                                    }
-                                    </>
+
                                     : 
-                                    <>
-                                        <li className="nav__submenu-item ">
+
+                                        <li key={key} className="nav__submenu-item ">
                                             <Link to={`/moje-zlacze/${el.url}`}>{el.name}</Link>
                                         </li>
-                                    </>
+
                                 )}
                                 
                             </ul>
@@ -138,25 +136,20 @@ export const NavbarComponent = (props) => {
                                 <FontAwesomeIcon icon={faAngleDown} className={'angle-up angle-up--main'} />
                             </a>
                             <ul className="nav__submenu">
-                                {props.machines.map(el => Array.isArray(el) ?
-                                    <>
-                                        {
-                                            <>
-                                                <li className="nav__submenu-item nav__submenu-item--list">
-                                                    <Link to={`/moja-maszyna/${el[0].category[0]}`} element={<ThreePoint />}>
-                                                        {el[0].category[1]}
-                                                    </Link>
-                                                </li>
-                                            </>
+                                {props.machines.map((el,key) => Array.isArray(el) ?
 
-                                        }
-                                    </>
+                                    <li key={key} className="nav__submenu-item nav__submenu-item--list">
+                                        <Link to={`/moja-maszyna/${el[0].category[0]}`} element={<ThreePoint />}>
+                                            {el[0].category[1]}
+                                        </Link>
+                                    </li>
+
                                     :
-                                    <>
-                                        <li className="nav__submenu-item ">
-                                            <Link to={`/moja-maszyna/${el.url}`}>{el.name}</Link>
-                                        </li>
-                                    </>
+
+                                    <li key={key} className="nav__submenu-item ">
+                                        <Link to={`/moja-maszyna/${el.url}`}>{el.name}</Link>
+                                    </li>
+
                                 )}
                                 {/*<li className="nav__submenu-item ">*/}
                                 {/*    <Link to={'/moja-maszyna/ladowarka-kolowa'} element={<WheelLoader />}>Ładowarka kołowa</Link>*/}

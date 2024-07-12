@@ -30,19 +30,20 @@ export const TableComponent = (props) => {
                     <TableRow>
                         <th className={'btn-container'} />
                         <th className={'favourite-container'} />
-                        {Object.keys(props.data[0]).map(tableCell => {
-                            return (<TableCell >{tableCell}</TableCell>);
+                        {Object.keys(props.data[0]).map((tableCell,key) => {
+                            return (<TableCell key={key} >{tableCell}</TableCell>);
                         })}
                     </TableRow>
                 </TableHead>
                 <TableBody>
                     {props.data.filter(product=> {
                         return product.weight >= props.displayedItems[0] & product.weight <= props.displayedItems[1]
-                    }).filter(product => isChecked(product)).map(product => {
+                    }).filter(product => isChecked(product)).map((product, key) => {
                         const fields = Object.values(product);
                 
                         return (
                             <TableRow
+                                key={key}
                                 sx={{ '&:last-child td, &:last-child th': { border: 0 } }} className={'tr'} onClick={() => {
                                     // console.log(cart);
                             }}
@@ -53,7 +54,7 @@ export const TableComponent = (props) => {
                                 {/*<div>{1}</div>*/}
                                 {/*<button className='buy-btn btn-container' onClick={() => changeCart(product, 1)}>+</button>*/}
                                 {fields.map((field, index) => {
-                                    return index === 0 ? <TableCell><Link to={`../${field}`}>{field}</Link></TableCell> : <TableCell>{field}</TableCell>;
+                                    return index === 0 ? <TableCell key={index}><Link to={`../${field}`}>{field}</Link></TableCell> : <TableCell key={index}>{field}</TableCell>;
                                 })}
                                  {/* {fields.map(field => console.log(Object.entries(field)))} */}
                             </TableRow>

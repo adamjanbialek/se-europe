@@ -1,4 +1,5 @@
 import './CouplingGroup.scss';
+import {Link} from "react-router-dom";
 
 export const CouplingGroup = (props) => {
     return (
@@ -8,13 +9,12 @@ export const CouplingGroup = (props) => {
                 <h1 className={'page-title'}>{props.couplingName}</h1>
             </div>
             <div className={'available-choices-container links-container coupling-group-item'}>
-                {console.log(props)}
-            { props.products.map(product => {
+            { props.products.map((product,key) => {
                 const el = <picture>
                     <img src={product.imgUrl} />
                 </picture>;
                 return (
-                    <a className={'link'} href={`${product.url}`}>
+                    <a key={key} className={'link'} href={`${product.url}`}>
                         <div className={'bg-change'} />
                         {product.imgUrl ? el : ''}
                         <p className={'link-name'} >

@@ -17,7 +17,7 @@ export const Se = (props) => {
     
     return (
         <main className='product-page'>
-            <ThreePoint products={props.coupling.filter(el => Object.values(el.tableData).flat().find(el => el.artNo === props.products.id))[0]}></ThreePoint>
+            <ThreePoint products={props.coupling.filter((el) => Object.values(el.tableData).flat().find(el => el.artNo === props.products.id))[0]}></ThreePoint>
             {/*{console.log(props.coupling.map(el => Object.values(el.tableData).flat()).filter(el => el.find(elem => elem.artNo === props.products.id)))}*/}
             <section className={'section-contrains tables-page item-page'}>
                 <div>
@@ -27,7 +27,7 @@ export const Se = (props) => {
                     <h2>{props.products.subtitle}</h2>
                     <br></br>
                     {props.products.description.map(
-                        product => <><p>{product}</p><br></br></>
+                        (product,key) => <p key={key}>{product}</p>
                     )}
                     {props.products.benefits.length > 0 ?
                         <>
@@ -35,7 +35,7 @@ export const Se = (props) => {
 
                             <ul>
                                 {props.products.benefits.map(
-                                    benefit => <><ul>{benefit}</ul></>
+                                    (benefit,key) =><ul key={key}>{benefit}</ul>
                                 )}
                             </ul>
                         </>
@@ -47,7 +47,7 @@ export const Se = (props) => {
 
                             <ul>
                                 {props.products.technicalData.map(
-                                    data => <><li>{`${data[0]}: ${data[1]}`}</li></>
+                                    (data,key) => <li key={key}>{`${data[0]}: ${data[1]}`}</li>
                                 )}
                             </ul>
                             <br></br>

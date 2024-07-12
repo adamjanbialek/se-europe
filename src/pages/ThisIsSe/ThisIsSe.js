@@ -28,7 +28,7 @@ export const ThisIsSe = () => {
                         Nasza profesjonalna obsługa klienta, konkurencyjne ceny, budowanie silnych relacji i proaktywne
                         podejście pozwoliły nam zdobyć większe udziały w rynku w Szwecji i w całej Europie.
                     </p>
-                    <video controls autoPlay muted="true" loop playsInline
+                    <video controls autoPlay muted={true} loop playsInline
                            src={video} type="video/mp4">
                     </video>
                 </div>

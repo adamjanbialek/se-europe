@@ -50,18 +50,18 @@ export const HomePage = ({machines}) => {
                 </div>
                 <div className={'list-container'}>
                     <div className={'vehicles-list'}>
-                        { machines.flat().map(product => {
+                        { machines.flat().map((product,key) => {
                             const el = <picture>
                                 <img src={product.category[2]} />
                             </picture>;
                             return (
-                                <a className={'vehicle-link'} href={`/moja-maszyna/${product.hasOwnProperty('category') ? product.category[0]: product.name}`}>
+                                <Link key={key} className={'vehicle-link'} to={`/moja-maszyna/${product.hasOwnProperty('category') ? product.category[0]: product.name}`}>
                                     <div className={'bg-change'} />
                                     {product.imgUrl ? el : ''}
                                     <p className={'vehicle-name link-title--smaller'} >
                                         {product.hasOwnProperty('category') ? product.category[1]: product.name}
                                     </p>
-                                </a>
+                                </Link>
                             )
                         })}
                         {/*<Link className={'vehicle-link'} to="">*/}

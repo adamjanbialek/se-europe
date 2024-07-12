@@ -69,36 +69,31 @@ export const SidebarComponent = (props) => {
                         </AccordionSummary>
                         <AccordionDetails>
                             <ul >
-                                {props.products.map(el => Array.isArray(el) ?
-                                    <>
-                                        {
-                                            <>
-                                                <li className="nav__submenu-item">
-                                                    <Accordion className={'aside__line aside__line--accordion'}>
-                                                        <AccordionSummary
-                                                            expandIcon={<FontAwesomeIcon className={'angle-up'} icon={faAngleUp} />}
-                                                            aria-controls="panel2-content"
-                                                            id="panel2-header"
-                                                        >
-                                                            <Link className={'aside__line aside__line--narrow'} to={`/moje-zlacze/${el[0].couplings[0]}`} element={<MyMachine/>}>{el[0].couplings[1]}</Link>
-                                                        </AccordionSummary>
-                                                        <AccordionDetails>
-                                                            <ul>
-                                                                {el.map(elem => <li className="nav__submenu-item "><Link to={`/moje-zlacze/${elem.url}`}> {elem.name}</Link></li>)}
-                                                            </ul>
-                                                        </AccordionDetails>
-                                                    </Accordion>
-                                                </li>
-                                            </>
+                                {props.products.map((el,key) => Array.isArray(el) ?
 
-                                        }
-                                    </>
+                                    <li key={key} className="nav__submenu-item">
+                                        <Accordion className={'aside__line aside__line--accordion'}>
+                                            <AccordionSummary
+                                                expandIcon={<FontAwesomeIcon className={'angle-up'} icon={faAngleUp} />}
+                                                aria-controls="panel2-content"
+                                                id="panel2-header"
+                                            >
+                                                <Link className={'aside__line aside__line--narrow'} to={`/moje-zlacze/${el[0].couplings[0]}`} element={<MyMachine/>}>{el[0].couplings[1]}</Link>
+                                            </AccordionSummary>
+                                            <AccordionDetails>
+                                                <ul>
+                                                    {el.map((elem,key) => <li key={key} className="nav__submenu-item "><Link to={`/moje-zlacze/${elem.url}`}> {elem.name}</Link></li>)}
+                                                </ul>
+                                            </AccordionDetails>
+                                        </Accordion>
+                                    </li>
+
                                     :
-                                    <>
-                                        <li className="nav__submenu-item ">
-                                            <Link to={`/moje-zlacze/${el.url}`}>{el.name}</Link>
-                                        </li>
-                                    </>
+
+                                    <li key={key} className="nav__submenu-item ">
+                                        <Link to={`/moje-zlacze/${el.url}`}>{el.name}</Link>
+                                    </li>
+
                                 )}
                             </ul>
 
@@ -114,30 +109,23 @@ export const SidebarComponent = (props) => {
                         </AccordionSummary>
                         <AccordionDetails>
                             <ul >
-                                {props.machines.map(el => Array.isArray(el) ?
-                                    <>
-                                        {
-                                            <>
-                                                <li className="nav__submenu-item">
-                                                    <Accordion className={'aside__line aside__line--accordion'}>
-                                                        <AccordionSummary
-                                                            aria-controls="panel2-content"
-                                                            id="panel2-header"
-                                                        >
-                                                            <Link to={`/moja-maszyna/${el[0].category[0]}`} element={<MyMachine/>}>{el[0].category[1]}</Link>
-                                                        </AccordionSummary>
-                                                    </Accordion>
-                                                </li>
-                                            </>
+                                {props.machines.map((el, key) => Array.isArray(el) ?
+                                    <li key={key} className="nav__submenu-item">
+                                        <Accordion className={'aside__line aside__line--accordion'}>
+                                            <AccordionSummary
+                                                aria-controls="panel2-content"
+                                                id="panel2-header"
+                                            >
+                                                <Link to={`/moja-maszyna/${el[0].category[0]}`} element={<MyMachine/>}>{el[0].category[1]}</Link>
+                                            </AccordionSummary>
+                                        </Accordion>
+                                    </li>
 
-                                        }
-                                    </>
                                     :
-                                    <>
-                                        <li className="nav__submenu-item ">
-                                            <Link to={`/moja-maszyna/${el.url}`}>{el.name}</Link>
-                                        </li>
-                                    </>
+
+                                    <li key={key} className="nav__submenu-item ">
+                                        <Link to={`/moja-maszyna/${el.url}`}>{el.name}</Link>
+                                    </li>
                                 )}
                                 {/*<li className="nav__submenu-item ">*/}
                                 {/*    <Link to={'/moja-maszyna/ladowarka-kolowa'}>Ładowarka kołowa</Link>*/}
