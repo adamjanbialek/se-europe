@@ -51,15 +51,15 @@ export const AmountButtonGroup = ({product}) => {
         }
     }
     return (
-        <div className={'amount-btn-group'}>
+        <th className={'amount-btn-group'}>
             <button className='buy-btn btn-container' onClick={() => {
                 changeCart(product, amount);
                 setAmount(1);
             }}>BUY</button>
             <button className='btn-container btn-amount' onClick={() => setAmount(amount > 0 ? amount - 1 : 0 )}>-</button>
-            <div className={'buy-btn btn-container '}>{amount}</div>
+            <p className={'buy-btn btn-container '}>{amount}</p>
             <button className='btn-container btn-amount' onClick={() => setAmount(amount + 1)}>+</button>
             <FontAwesomeIcon icon={faHeart} className={'like favourite-container'} onClick={onToggleFav} />
-        </div>
+        </th>
     )
 }

@@ -28,8 +28,8 @@ export const TableComponent = (props) => {
             <Table sx={{ minWidth: 650 }} aria-label="simple table">
                 <TableHead>
                     <TableRow>
-                        <div className={'btn-container'} />
-                        <div className={'favourite-container'} />
+                        <th className={'btn-container'} />
+                        <th className={'favourite-container'} />
                         {Object.keys(props.data[0]).map(tableCell => {
                             return (<TableCell >{tableCell}</TableCell>);
                         })}

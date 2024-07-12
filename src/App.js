@@ -100,11 +100,11 @@ function App() {
         <AuthContext.Provider value={[user, setUser]}>
             <CartContext.Provider value={[cart, setCart]}>
                 <OrderAndDeliveryContext.Provider value={[orderAndDelivery, setOrderAndDelivery]}>
-                    <Router>
+                    <Router basename="/se-europe-pl">
                         <NavbarComponent products={couplings} machines={machines}/>
                         <SidebarComponent products={couplings} machines={machines}/>
                         <CartSidebar/>
-                        <Routes basename="/se-europe-pl">
+                        <Routes >
                             <Route path="/" element={<HomePage machines={machines} />} />
                             <Route path="/moje-zlacze">
                                 <Route index  element={<MyCoupling products={couplings} />} />
