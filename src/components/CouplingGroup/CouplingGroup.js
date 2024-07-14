@@ -14,13 +14,13 @@ export const CouplingGroup = (props) => {
                     <img src={product.imgUrl} />
                 </picture>;
                 return (
-                    <a key={key} className={'link'} href={`${product.url}`}>
+                    <Link key={key} className={'link'} to={`../${product.url}`}>
                         <div className={'bg-change'} />
                         {product.imgUrl ? el : ''}
                         <p className={'link-name'} >
                             {product.name}
                         </p>
-                    </a>
+                    </Link>
                 )
             })}
             </div>
