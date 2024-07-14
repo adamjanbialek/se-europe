@@ -65,7 +65,7 @@ export const SidebarComponent = (props) => {
                             aria-controls="panel1-content"
                             id="panel1-header"
                         >
-                            <Link className={'aside__line aside__line--narrow'} to={'moje-zlacze'} element={<MyCoupling/>}>Moje złącze</Link>
+                            <Link className={'aside__line aside__line--narrow'} to={'moje-zlacze'}  element={<MyCoupling/>}>Moje złącze</Link>
                         </AccordionSummary>
                         <AccordionDetails>
                             <ul >
