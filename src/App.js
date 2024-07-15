@@ -40,12 +40,15 @@ import {CartSidebar} from "./components/CartSidebar/CartSidebar";
 import {CheckoutComponent} from "./components/CheckoutComponent/CheckoutComponent";
 import {ThankYou} from "./components/ThankYou/ThankYou";
 import {FavsTable} from "./components/FavsTable/FavsTable";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faXmark} from "@fortawesome/free-solid-svg-icons";
 
 export const Context = createContext({sidebar: false, cartSidebar: false});
 export const ProductContext = createContext(false);
 export const AuthContext = createContext(true);
 export const CartContext = createContext([]);
 export const OrderAndDeliveryContext = createContext({order: true, delivery: 1});
+export const FavsContext = createContext([]);
 
 function App() {
     const [toggleSidebar, setToggleSidebar] = useState({sidebar: false, cartSidebar: false});
@@ -84,6 +87,10 @@ function App() {
     let machines = JSON.parse(JSON.stringify(jsonMachines, null, 2));
     let client = JSON.parse(JSON.stringify(jsonClient, null, 2));
 
+    const [favs, setFavs] = useState(products.filter(product => product.favorite === true));
+
+    console.log(favs)
+
     function flattenArray(arr) {
         return arr.reduce((acc, val) => {
             if (Array.isArray(val)) {
@@ -101,73 +108,75 @@ function App() {
         <AuthContext.Provider value={[user, setUser]}>
             <CartContext.Provider value={[cart, setCart]}>
                 <OrderAndDeliveryContext.Provider value={[orderAndDelivery, setOrderAndDelivery]}>
-                    <Router >
-                        <NavbarComponent products={couplings} machines={machines}/>
-                        <SidebarComponent products={couplings} machines={machines}/>
-                        <CartSidebar/>
-                        <Routes >
-                            <Route path="/" element={<HomePage machines={machines} />} />
-                            <Route path="/moje-zlacze">
-                                <Route index  element={<MyCoupling products={couplings} />} />
-                                {products.map((product, key) => <Route key={key} path={`${product.id}`} element={<Se products={product} coupling={flattenArray(couplings)}/>} />) }
+                    <FavsContext.Provider value={[favs, setFavs]}>
+                        <Router >
+                            <NavbarComponent products={couplings} machines={machines}/>
+                            <SidebarComponent products={couplings} machines={machines}/>
+                            <CartSidebar/>
+                            <Routes >
+                                <Route path="/" element={<HomePage machines={machines} />} />
+                                <Route path="/moje-zlacze">
+                                    <Route index  element={<MyCoupling products={couplings} />} />
+                                    {products.map((product, key) => <Route key={key} path={`${product.id}`} element={<Se products={product} coupling={flattenArray(couplings)}/>} />) }
 
-                                {couplings.map((el,key) => Array.isArray(el) ?
-                                    <Route path="" key={key}>
-                                        <Route key={`group-${key}`} path={`${el[0].couplings[0]}`}  element={<CouplingGroup key={key} couplingName={`${el[0].couplings[1]}`} products={el} />} ></Route>
-                                        {el.map(
-                                            (elem, subIndex) => <Route key={`item-${key}-${subIndex}`} path={`${elem.url}`} element={<ThreePoint key={key} products={elem}/>}/>
-                                        )}
-                                    </Route>
-                                    :
-                                    <Route key={key} path={`${el.url}`} element={<ThreePoint products={el}/>}/>
-                                )}
-                            </Route>
-                            <Route path="/moja-maszyna">
-                                <Route index element={<MyMachine machines={machines} />} />
+                                    {couplings.map((el,key) => Array.isArray(el) ?
+                                        <Route path="" key={key}>
+                                            <Route key={`group-${key}`} path={`${el[0].couplings[0]}`}  element={<CouplingGroup key={key} couplingName={`${el[0].couplings[1]}`} products={el} />} ></Route>
+                                            {el.map(
+                                                (elem, subIndex) => <Route key={`item-${key}-${subIndex}`} path={`${elem.url}`} element={<ThreePoint key={key} products={elem}/>}/>
+                                            )}
+                                        </Route>
+                                        :
+                                        <Route key={key} path={`${el.url}`} element={<ThreePoint products={el}/>}/>
+                                    )}
+                                </Route>
+                                <Route path="/moja-maszyna">
+                                    <Route index element={<MyMachine machines={machines} />} />
 
-                                {products.map((product,key) => <Route key={key} path={`${product.id}`} element={<Se key={key} products={product} coupling={flattenArray(couplings)}/>} />) }
-                                {machines.map((el,key) => Array.isArray(el) ?
-                                    <Route key={key} path="">
-                                        <Route key={key} path={`${el[0].category[0]}`} element={<CouplingGroup couplingName={`${el[0].category[1]}`} products={el} />} ></Route>
-                                        {el.map(
-                                            (elem, key) => <Route key={key} path={`${elem.url}`} element={<ThreePoint products={elem}/>}/>
-                                        )}
-                                    </Route>
-                                    :
-                                    <Route key={key} path={`${el.url}`} element={<ThreePoint products={el}/>}/>
-                                )}
+                                    {products.map((product,key) => <Route key={key} path={`${product.id}`} element={<Se key={key} products={product} coupling={flattenArray(couplings)}/>} />) }
+                                    {machines.map((el,key) => Array.isArray(el) ?
+                                        <Route key={key} path="">
+                                            <Route key={key} path={`${el[0].category[0]}`} element={<CouplingGroup couplingName={`${el[0].category[1]}`} products={el} />} ></Route>
+                                            {el.map(
+                                                (elem, key) => <Route key={key} path={`${elem.url}`} element={<ThreePoint products={elem}/>}/>
+                                            )}
+                                        </Route>
+                                        :
+                                        <Route key={key} path={`${el.url}`} element={<ThreePoint products={el}/>}/>
+                                    )}
 
-                                {/*<Route path="ladowarka-kolowa" element={<WheelLoader />} />*/}
-                                {/*<Route path="koparka" element={<Excavator />} />*/}
-                                {/*<Route path="traktor" element={<Tractor />} />*/}
-                                {/*<Route path="ladowarka-teleskopowa" element={<TelescopicHandler />} />*/}
-                                {/*<Route path="wozek-widlowy" element={<Forklift />} />*/}
-                                {/*<Route path="bez-zlacz" element={<WithoutCoupling />} />*/}
-                            </Route>
-                            <Route path="/o-nas">
-                                <Route path="kontakt" element={<Contact />} />
-                                <Route path="to-jest-se" element={<ThisIsSe />} />
-                                <Route path="zrownowazony-rozwoj" element={<Sustainability />} />
-                                <Route path="znajdz-posrednika" element={<FindReseller />} />
-                            </Route>
-                            <Route path="/moje-konto"  >
-                                <Route path="moja-strona" element={<MyPage />} />
-                                <Route path="moje-dane" element={<MyDetails />} />
-                                <Route path="ulubione-produkty" element={<FavsTable products={products} />} />
-                                <Route path="przeglad-zamowien" element={<OrderOverview />} />
-                                <Route path="przeglad-faktur" element={<InvoiceOverview />} />
-                            </Route>
-                            <Route path="/checkout" element={<CheckoutComponent client={client} />} />
-                            <Route path="/thank-you-page" element={<ThankYou />} />
-                            <Route path="/pomoc-nowy-klient" element={<NewCustomer />} />
-                            <Route path="/pomoc-jak-zamawiac" element={<HowToShop />} />
-                            <Route path="/pomoc-jak-szukac" element={<HowToSearch />} />
-                            <Route path="/pomoc-bezpieczenstwo-cookies" element={<SecurityCookies />} />
-                            <Route path="/pomoc-dostawa" element={<Delivery />} />
-                            <Route path="/pomoc-moje-konto" element={<MyAccount />} />
-                        </Routes>
-                        <FooterComponent />
-                    </Router>
+                                    {/*<Route path="ladowarka-kolowa" element={<WheelLoader />} />*/}
+                                    {/*<Route path="koparka" element={<Excavator />} />*/}
+                                    {/*<Route path="traktor" element={<Tractor />} />*/}
+                                    {/*<Route path="ladowarka-teleskopowa" element={<TelescopicHandler />} />*/}
+                                    {/*<Route path="wozek-widlowy" element={<Forklift />} />*/}
+                                    {/*<Route path="bez-zlacz" element={<WithoutCoupling />} />*/}
+                                </Route>
+                                <Route path="/o-nas">
+                                    <Route path="kontakt" element={<Contact />} />
+                                    <Route path="to-jest-se" element={<ThisIsSe />} />
+                                    <Route path="zrownowazony-rozwoj" element={<Sustainability />} />
+                                    <Route path="znajdz-posrednika" element={<FindReseller />} />
+                                </Route>
+                                <Route path="/moje-konto"  >
+                                    <Route path="moja-strona" element={<MyPage />} />
+                                    <Route path="moje-dane" element={<MyDetails />} />
+                                    <Route path="ulubione-produkty" element={<FavsTable products={products} />} />
+                                    <Route path="przeglad-zamowien" element={<OrderOverview />} />
+                                    <Route path="przeglad-faktur" element={<InvoiceOverview />} />
+                                </Route>
+                                <Route path="/checkout" element={<CheckoutComponent client={client} />} />
+                                <Route path="/thank-you-page" element={<ThankYou />} />
+                                <Route path="/pomoc-nowy-klient" element={<NewCustomer />} />
+                                <Route path="/pomoc-jak-zamawiac" element={<HowToShop />} />
+                                <Route path="/pomoc-jak-szukac" element={<HowToSearch />} />
+                                <Route path="/pomoc-bezpieczenstwo-cookies" element={<SecurityCookies />} />
+                                <Route path="/pomoc-dostawa" element={<Delivery />} />
+                                <Route path="/pomoc-moje-konto" element={<MyAccount />} />
+                            </Routes>
+                            <FooterComponent />
+                        </Router>
+                    </FavsContext.Provider>
                 </OrderAndDeliveryContext.Provider>
             </CartContext.Provider>
         </AuthContext.Provider>

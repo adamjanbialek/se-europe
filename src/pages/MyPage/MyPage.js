@@ -33,76 +33,76 @@ export const MyPage = () => {
         <main className={'my-page'}>
 
             <section className={'section-contrains tables-page'}>
-                <Accordion className={'aside__line aside__line--accordion'}>
-                    <AccordionSummary
-                        expandIcon={<FontAwesomeIcon className={'angle-up'} icon={faAngleUp} />}
-                        aria-controls="panel1-content"
-                        id="panel1-header"
-                    >
-                        <Link className={'aside__line aside__line--narrow'} >Lista cen</Link>
-                    </AccordionSummary>
-                    <AccordionDetails>
-                        <ul>
-                            <li>
-                                Aby ułatwić Ci zakupy, teraz nasze ceny będą widoczne bezpośrednio na produktach. 
-                                Poprzedni cennik jest już nieważny.
-                                Dzięki tej zmianie zawsze będziesz miał dostęp do najnowszych, aktualnych cen.
-                                <br />
-                                Kliknij poniżej na wybrany zakres maszyn, aby zobaczyć najnowsze zaktualizowane produkty.
-                            </li>
-                    <div className={'vehicles-list'}>
-                        <Link className={'vehicle-link'} data-tab="0" onClick={() => displayData(0)} to="">
-                            <picture>
-                                <img src={wheelLoader}/>
-                            </picture>
-                            <p className={'vehicle-name link-title--smaller'}>ŁADOWARKA KOŁOWA</p>
-                        </Link>
-                        <Link className={'vehicle-link'} data-tab="1" onClick={() => displayData(1)} to="">
-                            <picture>
-                                <img src={excavator}/>
-                            </picture>
-                            <p className={'vehicle-name link-title--smaller'}>KOPARKA</p>
-                        </Link>
-                        <Link className={'vehicle-link'} data-tab="2" onClick={() => displayData(2)} to="">
-                            <picture>
-                                <img src={tractor}/>
-                            </picture>
-                            <p className={'vehicle-name link-title--smaller'}>TRAKTOR</p>
-                        </Link>
-                        <Link className={'vehicle-link'} data-tab="3" onClick={() => displayData(3)} to="">
-                            <picture>
-                                <img src={telescopicHandler}/>
-                            </picture>
-                            <p className={'vehicle-name link-title--smaller'}>PODNOŚNIK TELESKOPOWY</p>
-                        </Link>
-                        <Link className={'vehicle-link'} data-tab="4" onClick={() => displayData(4)} to="">
-                            <picture>
-                                <img src={skidLoader}/>
-                            </picture>
-                            <p className={'vehicle-name link-title--smaller'}>ŁADOWARKA SKRZYNKOWA</p>
-                        </Link>
-                        <Link className={'vehicle-link'} data-tab="5" onClick={() => displayData(5)} to="">
-                            <picture>
-                                <img src={forkLift}/>
-                            </picture>
-                            <p className={'vehicle-name link-title--smaller'} >WÓZEK WIDŁOWY</p>
-                        </Link>
-                    </div>
-                        </ul>
-                        <div className={'infoData'}>
-                            <p>Nr produktu</p>
-                            <p>Produkt</p>
-                            <p>Data zmiany</p>
-                            <p>Informacje</p>
-                        </div>
-                        <div className={'productData'}>
-                            <p className={'itemNo'}></p>
-                            <p className={'product'}></p>
-                            <p className={'dateChange'}></p>
-                            <p className={'info'}></p>
-                        </div>
-                    </AccordionDetails>
-                </Accordion>
+                {/*<Accordion className={'aside__line aside__line--accordion'}>*/}
+                {/*    <AccordionSummary*/}
+                {/*        expandIcon={<FontAwesomeIcon className={'angle-up'} icon={faAngleUp} />}*/}
+                {/*        aria-controls="panel1-content"*/}
+                {/*        id="panel1-header"*/}
+                {/*    >*/}
+                {/*        <Link className={'aside__line aside__line--narrow'} >Lista cen</Link>*/}
+                {/*    </AccordionSummary>*/}
+                {/*    <AccordionDetails>*/}
+                {/*        <ul>*/}
+                {/*            <li>*/}
+                {/*                Aby ułatwić Ci zakupy, teraz nasze ceny będą widoczne bezpośrednio na produktach. */}
+                {/*                Poprzedni cennik jest już nieważny.*/}
+                {/*                Dzięki tej zmianie zawsze będziesz miał dostęp do najnowszych, aktualnych cen.*/}
+                {/*                <br />*/}
+                {/*                Kliknij poniżej na wybrany zakres maszyn, aby zobaczyć najnowsze zaktualizowane produkty.*/}
+                {/*            </li>*/}
+                {/*    <div className={'vehicles-list'}>*/}
+                {/*        <Link className={'vehicle-link'} data-tab="0" onClick={() => displayData(0)} to="">*/}
+                {/*            <picture>*/}
+                {/*                <img src={wheelLoader}/>*/}
+                {/*            </picture>*/}
+                {/*            <p className={'vehicle-name link-title--smaller'}>ŁADOWARKA KOŁOWA</p>*/}
+                {/*        </Link>*/}
+                {/*        <Link className={'vehicle-link'} data-tab="1" onClick={() => displayData(1)} to="">*/}
+                {/*            <picture>*/}
+                {/*                <img src={excavator}/>*/}
+                {/*            </picture>*/}
+                {/*            <p className={'vehicle-name link-title--smaller'}>KOPARKA</p>*/}
+                {/*        </Link>*/}
+                {/*        <Link className={'vehicle-link'} data-tab="2" onClick={() => displayData(2)} to="">*/}
+                {/*            <picture>*/}
+                {/*                <img src={tractor}/>*/}
+                {/*            </picture>*/}
+                {/*            <p className={'vehicle-name link-title--smaller'}>TRAKTOR</p>*/}
+                {/*        </Link>*/}
+                {/*        <Link className={'vehicle-link'} data-tab="3" onClick={() => displayData(3)} to="">*/}
+                {/*            <picture>*/}
+                {/*                <img src={telescopicHandler}/>*/}
+                {/*            </picture>*/}
+                {/*            <p className={'vehicle-name link-title--smaller'}>PODNOŚNIK TELESKOPOWY</p>*/}
+                {/*        </Link>*/}
+                {/*        <Link className={'vehicle-link'} data-tab="4" onClick={() => displayData(4)} to="">*/}
+                {/*            <picture>*/}
+                {/*                <img src={skidLoader}/>*/}
+                {/*            </picture>*/}
+                {/*            <p className={'vehicle-name link-title--smaller'}>ŁADOWARKA SKRZYNKOWA</p>*/}
+                {/*        </Link>*/}
+                {/*        <Link className={'vehicle-link'} data-tab="5" onClick={() => displayData(5)} to="">*/}
+                {/*            <picture>*/}
+                {/*                <img src={forkLift}/>*/}
+                {/*            </picture>*/}
+                {/*            <p className={'vehicle-name link-title--smaller'} >WÓZEK WIDŁOWY</p>*/}
+                {/*        </Link>*/}
+                {/*    </div>*/}
+                {/*        </ul>*/}
+                {/*        <div className={'infoData'}>*/}
+                {/*            <p>Nr produktu</p>*/}
+                {/*            <p>Produkt</p>*/}
+                {/*            <p>Data zmiany</p>*/}
+                {/*            <p>Informacje</p>*/}
+                {/*        </div>*/}
+                {/*        <div className={'productData'}>*/}
+                {/*            <p className={'itemNo'}></p>*/}
+                {/*            <p className={'product'}></p>*/}
+                {/*            <p className={'dateChange'}></p>*/}
+                {/*            <p className={'info'}></p>*/}
+                {/*        </div>*/}
+                {/*    </AccordionDetails>*/}
+                {/*</Accordion>*/}
                 <Accordion className={'aside__line aside__line--accordion'}>
                     <AccordionSummary
                         expandIcon={<FontAwesomeIcon className={'angle-up'} icon={faAngleUp} />}
@@ -114,7 +114,7 @@ export const MyPage = () => {
                     <AccordionDetails>
                         <ul >
                             <li>
-                                3 punkt
+                                <a href='/moje-konto/ulubione-produkty'>Zobacz ulubione produkty</a>
                             </li>
                         </ul>
                     </AccordionDetails>
@@ -153,56 +153,56 @@ export const MyPage = () => {
 
                     </AccordionDetails>
                 </Accordion>
-                <Accordion className={'aside__line aside__line--accordion'}>
-                    <AccordionSummary
-                        expandIcon={<FontAwesomeIcon className={'angle-up'} icon={faAngleUp} />}
-                        aria-controls="panel1-content"
-                        id="panel1-header"
-                    >
-                        <Link className={'aside__line aside__line--narrow'} >Bank zdjęć</Link>
-                    </AccordionSummary>
-                    <AccordionDetails>
-                    <div className={'vehicles-list'}>
-                        <Link className={'vehicle-link'} data-tab="0" onClick={() => displayData(0)} to="">
-                            <picture>
-                                <img src={wheelLoader}/>
-                            </picture>
-                            <p className={'vehicle-name link-title--smaller'}>ŁADOWARKA KOŁOWA</p>
-                        </Link>
-                        <Link className={'vehicle-link'} data-tab="1" onClick={() => displayData(1)} to="">
-                            <picture>
-                                <img src={excavator}/>
-                            </picture>
-                            <p className={'vehicle-name link-title--smaller'}>KOPARKA</p>
-                        </Link>
-                        <Link className={'vehicle-link'} data-tab="2" onClick={() => displayData(2)} to="">
-                            <picture>
-                                <img src={tractor}/>
-                            </picture>
-                            <p className={'vehicle-name link-title--smaller'}>TRAKTOR</p>
-                        </Link>
-                        <Link className={'vehicle-link'} data-tab="3" onClick={() => displayData(3)} to="">
-                            <picture>
-                                <img src={telescopicHandler}/>
-                            </picture>
-                            <p className={'vehicle-name link-title--smaller'}>PODNOŚNIK TELESKOPOWY</p>
-                        </Link>
-                        <Link className={'vehicle-link'} data-tab="4" onClick={() => displayData(4)} to="">
-                            <picture>
-                                <img src={skidLoader}/>
-                            </picture>
-                            <p className={'vehicle-name link-title--smaller'}>ŁADOWARKA SKRZYNKOWA</p>
-                        </Link>
-                        <Link className={'vehicle-link'} data-tab="5" onClick={() => displayData(5)} to="">
-                            <picture>
-                                <img src={forkLift}/>
-                            </picture>
-                            <p className={'vehicle-name link-title--smaller'} >WÓZEK WIDŁOWY</p>
-                        </Link>
-                    </div>
+                {/*<Accordion className={'aside__line aside__line--accordion'}>*/}
+                {/*    <AccordionSummary*/}
+                {/*        expandIcon={<FontAwesomeIcon className={'angle-up'} icon={faAngleUp} />}*/}
+                {/*        aria-controls="panel1-content"*/}
+                {/*        id="panel1-header"*/}
+                {/*    >*/}
+                {/*        <Link className={'aside__line aside__line--narrow'} >Bank zdjęć</Link>*/}
+                {/*    </AccordionSummary>*/}
+                {/*    <AccordionDetails>*/}
+                {/*    <div className={'vehicles-list'}>*/}
+                {/*        <Link className={'vehicle-link'} data-tab="0" onClick={() => displayData(0)} to="">*/}
+                {/*            <picture>*/}
+                {/*                <img src={wheelLoader}/>*/}
+                {/*            </picture>*/}
+                {/*            <p className={'vehicle-name link-title--smaller'}>ŁADOWARKA KOŁOWA</p>*/}
+                {/*        </Link>*/}
+                {/*        <Link className={'vehicle-link'} data-tab="1" onClick={() => displayData(1)} to="">*/}
+                {/*            <picture>*/}
+                {/*                <img src={excavator}/>*/}
+                {/*            </picture>*/}
+                {/*            <p className={'vehicle-name link-title--smaller'}>KOPARKA</p>*/}
+                {/*        </Link>*/}
+                {/*        <Link className={'vehicle-link'} data-tab="2" onClick={() => displayData(2)} to="">*/}
+                {/*            <picture>*/}
+                {/*                <img src={tractor}/>*/}
+                {/*            </picture>*/}
+                {/*            <p className={'vehicle-name link-title--smaller'}>TRAKTOR</p>*/}
+                {/*        </Link>*/}
+                {/*        <Link className={'vehicle-link'} data-tab="3" onClick={() => displayData(3)} to="">*/}
+                {/*            <picture>*/}
+                {/*                <img src={telescopicHandler}/>*/}
+                {/*            </picture>*/}
+                {/*            <p className={'vehicle-name link-title--smaller'}>PODNOŚNIK TELESKOPOWY</p>*/}
+                {/*        </Link>*/}
+                {/*        <Link className={'vehicle-link'} data-tab="4" onClick={() => displayData(4)} to="">*/}
+                {/*            <picture>*/}
+                {/*                <img src={skidLoader}/>*/}
+                {/*            </picture>*/}
+                {/*            <p className={'vehicle-name link-title--smaller'}>ŁADOWARKA SKRZYNKOWA</p>*/}
+                {/*        </Link>*/}
+                {/*        <Link className={'vehicle-link'} data-tab="5" onClick={() => displayData(5)} to="">*/}
+                {/*            <picture>*/}
+                {/*                <img src={forkLift}/>*/}
+                {/*            </picture>*/}
+                {/*            <p className={'vehicle-name link-title--smaller'} >WÓZEK WIDŁOWY</p>*/}
+                {/*        </Link>*/}
+                {/*    </div>*/}
 
-                    </AccordionDetails>
-                </Accordion>
+                {/*    </AccordionDetails>*/}
+                {/*</Accordion>*/}
             </section>
         </main>
     );
