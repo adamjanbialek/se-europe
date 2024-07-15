@@ -114,7 +114,7 @@ export const MyPage = () => {
                     <AccordionDetails>
                         <ul >
                             <li>
-                                <a href='/moje-konto/ulubione-produkty'>Zobacz ulubione produkty</a>
+                                <Link to={'/moje-konto/ulubione-produkty'}>Zobacz ulubione produkty</Link>
                             </li>
                         </ul>
                     </AccordionDetails>
@@ -130,7 +130,7 @@ export const MyPage = () => {
                     <AccordionDetails>
                         <ul >
                             <li>
-                                <a href='/moje-konto/moje-dane'>Zmień swoje dane</a>
+                                <Link to={'/moje-konto/moje-dane'}>Zmień swoje dane</Link>
                             </li>
                         </ul>
 
