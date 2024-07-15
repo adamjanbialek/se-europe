@@ -39,6 +39,7 @@ import jsonClient from './data/profile.json';
 import {CartSidebar} from "./components/CartSidebar/CartSidebar";
 import {CheckoutComponent} from "./components/CheckoutComponent/CheckoutComponent";
 import {ThankYou} from "./components/ThankYou/ThankYou";
+import {FavsTable} from "./components/FavsTable/FavsTable";
 
 export const Context = createContext({sidebar: false, cartSidebar: false});
 export const ProductContext = createContext(false);
@@ -152,6 +153,7 @@ function App() {
                             <Route path="/moje-konto"  >
                                 <Route path="moja-strona" element={<MyPage />} />
                                 <Route path="moje-dane" element={<MyDetails />} />
+                                <Route path="ulubione-produkty" element={<FavsTable products={products} />} />
                                 <Route path="przeglad-zamowien" element={<OrderOverview />} />
                                 <Route path="przeglad-faktur" element={<InvoiceOverview />} />
                             </Route>
