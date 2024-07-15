@@ -1,4 +1,5 @@
 import './LinksListWithImages.scss';
+import {Link} from "react-router-dom";
 
 export const LinksListWithImages = (props) => {
     return (
@@ -8,13 +9,13 @@ export const LinksListWithImages = (props) => {
                     <img src={product.imgUrl} />
                 </picture>;
                 return (
-                    <a className={'link'} href={`/moje-zlacze/${product.hasOwnProperty('couplings') ? product.couplings[0]: product.name}`}>
+                    <Link className={'link'} to={`/moje-zlacze/${product.hasOwnProperty('couplings') ? product.couplings[0]: product.name}`}>
                         <div className={'bg-change'} />
                         {product.imgUrl ? el : ''}
                         <p className={'link-name'} >
                             {product.hasOwnProperty('couplings') ? product.couplings[1]: product.name}
                         </p>
-                    </a>
+                    </Link>
                 )
             })}
         </div>

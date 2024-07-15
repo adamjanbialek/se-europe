@@ -9,14 +9,6 @@ import {LinksListWithImages} from "../../components/LinksListWithImages/LinksLis
 import {Link} from "react-router-dom";
 
 export const MyMachine = ({machines}) => {
-    const products = [
-        {name: '3 punkt', imgUrl: wheelLoader},
-        {name: 'Atlas', imgUrl: excavator},
-        {name: 'Avant-Multione', imgUrl: tractor},
-        {name: 'Bobcat', imgUrl: telescopicHandler},
-        {name: 'Cat 906', imgUrl: skidLoader},
-        {name: 'Dieci', imgUrl: forkLift},
-    ];
 
     return (
         <main className={'my-machine'}>
