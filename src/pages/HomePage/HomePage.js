@@ -44,7 +44,7 @@ export const HomePage = ({machines}) => {
                         Zaopatrujemy sprzedawców detalicznych w całej Europie w szeroką gamę wysokiej jakości produktów z
                         naszego dużego magazynu w Linköping. Cała sprzedaż odbywa się za pośrednictwem naszych sprzedawców.
                     </p>
-                    <h2 className={'page-title'}>
+                    <h2 className={'page-title'} >
                         DESIGN - JAKOŚĆ - BEZPIECZEŃSTWO - CENA
                     </h2>
                 </div>
