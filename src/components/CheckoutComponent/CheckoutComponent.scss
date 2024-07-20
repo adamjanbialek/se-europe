@@ -1,5 +1,9 @@
-.checkout-page {
+.App:has(.checkout-page) {
   background-color: rgba(170, 170, 170, 0.2);
+}
+
+.checkout-page {
+  //background-color: rgba(170, 170, 170, 0.2);
 
   .info-container {
     background-color: unset;

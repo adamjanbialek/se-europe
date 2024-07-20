@@ -23,6 +23,18 @@ export const HomePage = ({machines}) => {
                     </Link>
                 </div>
             </section>
+            <section className={'vehicles'}>
+                <div className={'section-contrains'}>
+                    <p className={'paragraph paragraph--large'}>
+                        SE Equipment AB magazynuje i dostarcza sprzęt, aby szybko zaspokoić potrzeby Twoje i rynku.
+                        Zaopatrujemy sprzedawców detalicznych w całej Europie w szeroką gamę wysokiej jakości produktów z
+                        naszego dużego magazynu w Linköping. Cała sprzedaż odbywa się za pośrednictwem naszych sprzedawców.
+                    </p>
+                    <h2 className={'page-title'} >
+                        DESIGN - JAKOŚĆ - BEZPIECZEŃSTWO - CENA
+                    </h2>
+                </div>
+            </section>
             <section className={'section-contrains place-order'}>
                 <div className={'gradient-box-container'}>
                     <div className={'gradient-box'}>
@@ -38,16 +50,6 @@ export const HomePage = ({machines}) => {
                 </div>
             </section>
             <section className={'vehicles'}>
-                <div className={'section-contrains'}>
-                    <p className={'paragraph paragraph--large'}>
-                        SE Equipment AB magazynuje i dostarcza sprzęt, aby szybko zaspokoić potrzeby Twoje i rynku.
-                        Zaopatrujemy sprzedawców detalicznych w całej Europie w szeroką gamę wysokiej jakości produktów z
-                        naszego dużego magazynu w Linköping. Cała sprzedaż odbywa się za pośrednictwem naszych sprzedawców.
-                    </p>
-                    <h2 className={'page-title'} >
-                        DESIGN - JAKOŚĆ - BEZPIECZEŃSTWO - CENA
-                    </h2>
-                </div>
                 <div className={'list-container'}>
                     <div className={'vehicles-list'}>
                         { machines.flat().map((product,key) => {

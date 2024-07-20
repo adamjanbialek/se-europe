@@ -48,7 +48,7 @@ export const CartSidebar = () => {
                                                     <p>{product.id}</p>
                                                     <h3>{product.title}</h3>
                                                     <p>{product.price}</p>
-                                                    <p>Sztuk: ${product.price * product.quantity}</p>
+                                                    <p>Łącznie: ${product.price * product.quantity}</p>
                                                 </div>
                                                 <FontAwesomeIcon className={'btn btn--close'} icon={faXmark} onClick={() => {
                                                     cart.filter(cartItem => cartItem.id === product.id).forEach(cartItem => {

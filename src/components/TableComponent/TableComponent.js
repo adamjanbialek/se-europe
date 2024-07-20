@@ -31,7 +31,7 @@ export const TableComponent = (props) => {
                         <th className={'btn-container'} />
                         <th className={'favourite-container'} />
                         {Object.keys(props.data[0]).map((tableCell,key) => {
-                            return (<TableCell key={key} >{tableCell}</TableCell>);
+                            return (<TableCell key={key} >{tableCell[0].toUpperCase() + tableCell.substring(1)}</TableCell>);
                         })}
                     </TableRow>
                 </TableHead>

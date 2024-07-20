@@ -62,8 +62,9 @@ aside .aside__line-container:first-of-type .btn {
 }
 
 .cart-item-container {
-  overflow-y: scroll;
-  height: 500px;
+  overflow-y: auto;
+  height: calc(100vh - 250px);
+  width: 100%;
 }
 
 .cart-img-container {
