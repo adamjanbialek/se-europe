@@ -18,7 +18,7 @@ export const TableComponent = (props) => {
 
     function isChecked(product) {
         if(Object.entries(props.checkboxes).filter(checkbox => checkbox[1] === true).length === 0 ||
-            Object.entries(props.checkboxes).filter(checkbox => checkbox[1] === true).map(checkbox => checkbox[0]).includes(product.coupling)) {
+            Object.entries(props.checkboxes).filter(checkbox => checkbox[1] === true).map(checkbox =>  checkbox[0]).includes(product.coupling)) {
             return product;
         }
     }
