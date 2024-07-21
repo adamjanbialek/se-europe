@@ -9,20 +9,20 @@ export const CouplingGroup = (props) => {
                 <h1 className={'page-title'}>{props.couplingName}</h1>
             </div>
             <div className={'available-choices-container links-container coupling-group-item'}>
-            { props.products.map((product,key) => {
-                const el = <picture>
-                    <img src={product.imgUrl} />
-                </picture>;
-                return (
-                    <Link key={key} className={'link'} to={`../${product.url}`}>
-                        <div className={'bg-change'} />
-                        {product.imgUrl ? el : ''}
-                        <p className={'link-name'} >
-                            {product.name}
-                        </p>
-                    </Link>
-                )
-            })}
+                { props.products.map((product,key) => {
+                    const el = <picture>
+                        <img src={product.imgUrl} />
+                    </picture>;
+                    return (
+                        <Link key={key} className={'link'} to={`../${product.url}`}>
+                            <div className={'bg-change'} />
+                            {product.imgUrl ? el : ''}
+                            <p className={'link-name'} >
+                                {product.name}
+                            </p>
+                        </Link>
+                    )
+                })}
             </div>
         </section>
     </main>

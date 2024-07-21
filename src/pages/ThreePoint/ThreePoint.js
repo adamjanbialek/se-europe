@@ -25,6 +25,11 @@ export const ThreePoint = (props) => {
     return (
         <main>
             <section className={'section-contrains tables-page'}>
+                {props.img === 'yes' ?
+                    <>
+                        {props.products.imgUrl ? <div className={'img-three-point'}><img src={props.products.imgUrl}/></div> : ''}
+                    </>
+                    : null}
                 <div className={'heading-container'}>
                     <h1 className={'page-title'}>{props.products.name}</h1>
                     <p className={'paragraph paragraph--medium'}>{props.products.description}</p>

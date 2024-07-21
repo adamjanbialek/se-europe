@@ -2,9 +2,9 @@
   [
     {
       "url": "adapter",
-      "name": "ADAPTER FOR WHEEL AND SKID LOADER",
+      "name": "ADAPTER DO ŁADOWARKI KOŁOWEJ I SKIDOWEJ",
       "imgUrl": "https://se-europe.com/images/prod630/adapter_hjullastare_se_equipment.png",
-      "description": "With an adapter from SE Equipment, you have the ability to attach a equipment with a\ndifferent bracket than the machine is designed for. If you have an adapter for your\nwheel loader/skid loader, you can avoid the additional costs of purchasing a new machine\nor equipment, simply attach the equipment to the adapter. A convenient sulotion for those who\nfrequently switch between equipments. At SE Equipment, we offer a wide variety of adapters\nin our range.\n\nClick on the item number in the table below for more product information.",
+      "description": "Dzięki adapterowi firmy SE Equipment masz możliwość podłączenia sprzętu z\ninny wspornik niż przeznaczony jest dla urządzenia. Jeśli masz adapter do swojego\nwheel loader/skid loader, you can avoid the additional costs of purchasing a new machine\nor equipment, simply attach the equipment to the adapter. A convenient sulotion for those who\nfrequently switch between equipments. At SE Equipment, we offer a wide variety of adapters\nin our range.\n\nClick on the item number in the table below for more product information.",
       "category": ["ladowarka-kolowa", "Ładowarka kołowa","https://se-europe.com/images/prod630/HJULLASTARE_START_2.png"],
       "tableData": {
         "2500kg": [
@@ -37,9 +37,9 @@
   [
     {
       "url": "asphalt-cutter",
-      "name": "Asphalt cutter",
+      "name": "Frezarka do asfaltu",
       "imgUrl": "https://se-europe.com/images/prod500/S40_asfaltssk%c3%a4rare_gr%c3%a4vmaskin.png",
-      "description": "With an adapter from SE Equipment you have the option of mounting an equipment with a different coupling than what the machine is adapted for.\n\nClick at the article number in the list below for more product information.",
+      "description": "Dzięki adapterowi firmy SE Equipment masz możliwość zamontowania urządzenia z innym sprzęgłem niż to, do którego maszyna jest przystosowana.\n\nClick at the article number in the list below for more product information.",
       "category": ["koparka", "Koparka","https://seequipment.se/images/site/GRAVMASKIN_START_2.png"],
       "tableData": {
         "650/3000": [
@@ -53,6 +53,24 @@
           }
         ]
       }
+    },
+    {
+      "url": "rake",
+      "name": "GRABIE",
+      "imgUrl": "https://se-europe.com/images/prod630/101374_vit.png",
+      "description": "Zgrabiarki firmy SE Equipment doskonale sprawdzają się w wielu prostszych obszarach pracy, takich jak ścieżki żwirowe, przenoszenie gałęzi i czyszczenie rowów.",
+      "category": ["koparka", "Koparka","https://seequipment.se/images/site/GRAVMASKIN_START_2.png"],
+      "tableData": {
+        "1200": [
+          {
+            "artNo": 101426,
+            "coupling": "S40",
+            "height": "262",
+            "model": "centered",
+            "weight": 57
+          }
+        ]
+      }
     }
   ],
   [
@@ -60,7 +78,7 @@
       "url": "adapter-tractor",
       "name": "ADAPTER",
       "imgUrl": "https://se-europe.com/images/prod630/100839_vit.png",
-      "description": "With an adapter from SE Equipment you have the option of mounting an equipment with a different coupling than what the machine is adapted for.\n\nClick at the article number in the list below for more product information.",
+      "description": "Dzięki adapterowi firmy SE Equipment masz możliwość zamontowania urządzenia z innym sprzęgłem niż to, do którego maszyna jest przystosowana.\n\nClick at the article number in the list below for more product information.",
       "category": ["traktor", "Traktor","https://se-europe.com/images/prod630/TRAKTOR_START_2.png"],
       "tableData": {
         "2500kg": [
@@ -93,9 +111,9 @@
   [
     {
       "url": "crane-jib",
-      "name": "Crane jib",
+      "name": "Wysięgnik dźwigu",
       "imgUrl": "https://se-europe.com/images/prod630/112697.1092.png",
-      "description": "The crane jib from SE Equipment is designed with a focus on reliability and safety.\nAll our crane jibs have a safety stop that prevents the lifting arm from slipping out of the fixed cavity.\n\nClick at the article number in the list below for more product information.",
+      "description": "Wysięgnik żurawia firmy SE Equipment został zaprojektowany z naciskiem na niezawodność i bezpieczeństwo.\nAll our crane jibs have a safety stop that prevents the lifting arm from slipping out of the fixed cavity.\n\nClick at the article number in the list below for more product information.",
       "category": ["ladowarka-teleskopowa", "Ładowarka teleskopowa","https://seequipment.se/images/site/TELESKOPLASTARE_START.png"],
       "tableData": {
         "650/3000": [

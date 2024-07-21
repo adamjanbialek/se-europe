@@ -123,7 +123,7 @@ function App() {
                                         <Route path="" key={key}>
                                             <Route key={`group-${key}`} path={`${el[0].couplings[0]}`}  element={<CouplingGroup key={key} couplingName={`${el[0].couplings[1]}`} products={el} />} ></Route>
                                             {el.map(
-                                                (elem, subIndex) => <Route key={`item-${key}-${subIndex}`} path={`${elem.url}`} element={<ThreePoint key={key} products={elem}/>}/>
+                                                (elem, subIndex) => <Route key={`item-${key}-${subIndex}`} path={`${elem.url}`} element={<ThreePoint img={'no'} key={key} products={elem}/>}/>
                                             )}
                                         </Route>
                                         :
@@ -138,7 +138,7 @@ function App() {
                                         <Route key={key} path="">
                                             <Route key={key} path={`${el[0].category[0]}`} element={<CouplingGroup couplingName={`${el[0].category[1]}`} products={el} />} ></Route>
                                             {el.map(
-                                                (elem, key) => <Route key={key} path={`${elem.url}`} element={<ThreePoint products={elem}/>}/>
+                                                (elem, key) => <Route key={key} path={`${elem.url}`} element={<ThreePoint img={'yes'} products={elem}/>}/>
                                             )}
                                         </Route>
                                         :
